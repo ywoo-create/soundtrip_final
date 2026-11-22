@@ -1,0 +1,325 @@
+
+/* SoundTrip subpages - shares the homepage's NOL-inspired purple/blue visual language. */
+.subpage { background:#fff; color:#20212a; }
+.subpage .st-main { width:74%; max-width:1200px; margin:0 auto; padding-bottom:24px; }
+.subpage .st-breadcrumb { display:flex; align-items:center; gap:10px; margin:24px 0 18px; color:#999; font-size:11px; letter-spacing:.3px; }
+.subpage .st-breadcrumb a { color:#777; }
+.subpage .st-breadcrumb a:hover { color:#4d5cff; }
+.subpage .st-breadcrumb span:last-child { color:#4d5cff; font-weight:bold; }
+.subpage .st-eyebrow { margin:0 0 10px; color:#4d5cff; font-size:11px; letter-spacing:1.6px; font-weight:bold; }
+.subpage .st-hero { min-height:300px; display:flex; overflow:hidden; border-radius:22px; background:#f3f4ff; }
+.subpage .st-hero-copy { width:53%; padding:45px 48px; display:flex; flex-direction:column; justify-content:center; }
+.subpage .st-hero-copy h1 { margin:0 0 16px; font-size:34px; line-height:1.28; letter-spacing:-1.1px; }
+.subpage .st-hero-description { max-width:490px; margin:0; color:#6e7080; font-size:14px; line-height:1.8; }
+.subpage .st-hero-image { width:47%; min-height:300px; }
+.subpage .st-hero-image img { width:100%; height:100%; object-fit:cover; }
+.subpage .st-hero-stats { display:flex; gap:28px; margin-top:27px; color:#777b90; font-size:9px; letter-spacing:.8px; }
+.subpage .st-hero-stats span { display:flex; flex-direction:column; gap:4px; }
+.subpage .st-hero-stats strong { color:#373a54; font-size:17px; letter-spacing:0; }
+.subpage .st-notice { min-height:45px; margin-top:22px; padding:0 16px; display:flex; align-items:center; gap:14px; border:1px solid #eeeef6; border-radius:12px; background:#fbfbfe; }
+.subpage .st-notice span { padding:5px 9px; border-radius:10px; background:#4d5cff; color:#fff; font-size:9px; font-weight:bold; letter-spacing:.7px; }
+.subpage .st-notice p { margin:0; color:#777; font-size:12px; }
+.subpage .st-section { margin-top:54px; }
+.subpage .st-section-heading { margin-bottom:20px; display:flex; align-items:flex-end; justify-content:space-between; }
+.subpage .st-section-heading .st-eyebrow { margin-bottom:7px; }
+.subpage .st-section-heading h2 { margin:0 0 7px; color:#242538; font-size:24px; letter-spacing:-.7px; }
+.subpage .st-section-heading p { margin:0; color:#898b98; font-size:12px; line-height:1.6; }
+.subpage .st-result-count { padding:7px 11px; border-radius:15px; background:#f1f2ff; color:#4d5cff; font-size:10px; font-weight:bold; letter-spacing:.6px; }
+.subpage .st-text-link { color:#4d5cff; font-size:12px; font-weight:bold; }
+.subpage .st-filter-row { margin-bottom:20px; display:flex; justify-content:space-between; align-items:center; gap:14px; }
+.subpage .st-filter-tabs { display:flex; flex-wrap:nowrap; gap:7px; }
+.subpage .st-filter-tabs button { padding:9px 17px; border:1px solid #e4e5ec; border-radius:18px; background:#fff; color:#727482; font-size:12px; }
+.subpage .st-filter-tabs button:hover,.subpage .st-filter-tabs button.selected { border-color:#4d5cff; background:#f1f2ff; color:#4d5cff; }
+.subpage .st-search-inline { width:230px; height:38px; padding:0 12px; display:flex; align-items:center; gap:8px; border:1px solid #e1e2e9; border-radius:20px; background:#fff; color:#4d5cff; }
+.subpage .st-search-inline span { font-size:20px; }
+.subpage .st-search-inline input { width:100%; min-width:0; border:0; outline:0; color:#333; font-size:12px; }
+.subpage .st-filter-hint { color:#999; font-size:11px; }
+.subpage .st-destination-grid,.subpage .st-genre-grid,.subpage .st-theme-grid { display:flex; flex-wrap:wrap; margin:0 -9px; }
+.subpage .st-destination-card,.subpage .st-genre-card,.subpage .st-theme-card { width:calc(25% - 18px); margin:0 9px 22px; overflow:hidden; border-radius:15px; background:#fff; }
+.subpage .st-card-image { height:160px; position:relative; overflow:hidden; border-radius:15px; background:#f2f2f5; }
+.subpage .st-card-image img { width:100%; height:100%; object-fit:cover; }
+.subpage .st-card-image .st-card-number { position:absolute; left:12px; top:12px; padding:5px 8px; border-radius:11px; background:rgba(255,255,255,.92); color:#4d5cff; font-size:10px; font-weight:bold; }
+.subpage .st-card-body { padding:13px 2px 3px; }
+.subpage .st-card-kicker { margin:0 0 6px; color:#4d5cff; font-size:10px; letter-spacing:.6px; font-weight:bold; }
+.subpage .st-card-body h3 { margin:0 0 7px; color:#27283a; font-size:16px; }
+.subpage .st-card-body p { min-height:38px; margin:0; color:#858694; font-size:11px; line-height:1.55; }
+.subpage .st-card-action { display:inline-block; margin-top:12px; padding-bottom:3px; border-bottom:1px solid #c7caff; color:#4d5cff; font-size:11px; font-weight:bold; }
+.subpage .st-card-label { display:inline-block; margin-top:12px; padding:5px 9px; border-radius:12px; background:#f4f4f8; color:#8c8d99; font-size:9px; }
+.subpage .st-destination-card:hover,.subpage .st-genre-card:hover,.subpage .st-theme-card:hover { box-shadow:0 5px 17px rgba(59,62,103,.10); }
+.subpage .st-destination-card:hover .st-card-image img,.subpage .st-genre-card:hover .st-card-image img,.subpage .st-theme-card:hover .st-card-image img { opacity:.88; }
+.subpage .st-feature-strip { min-height:140px; margin-top:55px; padding:30px 36px; display:flex; align-items:center; justify-content:space-between; border-radius:18px; background:#f1f2ff; }
+.subpage .st-feature-strip h2 { margin:0 0 8px; color:#27283a; font-size:21px; }
+.subpage .st-feature-strip p:not(.st-eyebrow) { margin:0; color:#777a8d; font-size:12px; }
+.subpage .st-primary-link { display:inline-block; padding:12px 17px; border:1px solid #4d5cff; border-radius:22px; background:#4d5cff; color:#fff; font-size:12px; font-weight:bold; white-space:nowrap; }
+.subpage .st-primary-link:hover,.subpage .st-primary-button:hover { background:#353ed0; border-color:#353ed0; color:#fff; }
+.subpage .st-primary-link span { margin-left:9px; }
+
+/* Tokyo genre guide */
+.subpage .st-city-hero { height:340px; position:relative; overflow:hidden; border-radius:22px; background:#252638; }
+.subpage .st-city-hero>img { width:100%; height:100%; object-fit:cover; }
+.subpage .st-city-hero-shade { position:absolute; inset:0; background:linear-gradient(90deg,rgba(17,19,38,.86),rgba(17,19,38,.50) 48%,rgba(17,19,38,.05)); }
+.subpage .st-city-hero-copy { position:absolute; left:52px; right:34%; top:50px; z-index:2; color:#fff; }
+.subpage .st-city-hero-copy .st-eyebrow { color:#c4c8ff; }
+.subpage .st-city-hero-copy h1 { margin:0 0 14px; font-size:31px; line-height:1.28; letter-spacing:-.8px; }
+.subpage .st-city-hero-copy p:not(.st-eyebrow) { margin:0; color:#e1e2ed; font-size:13px; line-height:1.8; }
+.subpage .st-light-link { display:inline-block; margin-top:20px; color:#fff; font-size:12px; font-weight:bold; border-bottom:1px solid rgba(255,255,255,.65); padding-bottom:4px; }
+.subpage .st-city-hero-label { position:absolute; right:24px; bottom:20px; z-index:2; color:#fff; font-size:9px; letter-spacing:1.1px; }
+.subpage .st-city-hero-label strong { margin-left:18px; font-size:12px; }
+.subpage .st-facts-row { margin-top:20px; padding:19px 8px; display:flex; border-bottom:1px solid #ececf2; border-top:1px solid #ececf2; }
+.subpage .st-facts-row div { width:25%; padding-left:24px; border-right:1px solid #ececf2; display:flex; flex-direction:column; gap:7px; }
+.subpage .st-facts-row div:last-child { border:0; }
+.subpage .st-facts-row span { color:#9698a5; font-size:9px; letter-spacing:.8px; }
+.subpage .st-facts-row strong { color:#303146; font-size:14px; }
+.subpage .genre-filter-row { justify-content:flex-start; }
+.subpage .st-genre-card { width:calc(25% - 18px); }
+.subpage .st-genre-card .st-card-image { height:150px; }
+.subpage .st-genre-card .st-card-body p { min-height:54px; }
+.subpage .st-route-section { padding:28px 30px; border-radius:18px; background:#fafaff; }
+.subpage .st-route-steps { display:flex; gap:0; }
+.subpage .st-route-steps>div { width:25%; padding:12px 20px; border-right:1px solid #e7e7f3; }
+.subpage .st-route-steps>div:last-child { border:0; }
+.subpage .st-route-steps span { display:block; margin-bottom:10px; color:#4d5cff; font-size:11px; font-weight:bold; }
+.subpage .st-route-steps strong { display:block; margin-bottom:6px; color:#333448; font-size:14px; }
+.subpage .st-route-steps p { margin:0; color:#9293a0; font-size:11px; line-height:1.5; }
+
+/* Playlist and chart */
+.subpage .st-playlist-hero { display:flex; min-height:320px; overflow:hidden; border-radius:22px; background:#f1f2ff; }
+.subpage .st-playlist-cover { width:330px; min-width:330px; padding:24px; position:relative; }
+.subpage .st-playlist-cover img { width:100%; height:100%; min-height:270px; object-fit:cover; border-radius:14px; }
+.subpage .st-playlist-cover span { position:absolute; left:38px; bottom:36px; padding:6px 10px; border-radius:12px; background:rgba(20,20,35,.65); color:#fff; font-size:9px; letter-spacing:1px; }
+.subpage .st-playlist-copy { padding:38px 42px; display:flex; flex-direction:column; justify-content:center; }
+.subpage .st-playlist-copy h1 { margin:0 0 13px; color:#242538; font-size:38px; line-height:1.05; letter-spacing:-1.3px; }
+.subpage .st-playlist-lead { max-width:500px; margin:0; color:#747688; font-size:13px; line-height:1.7; }
+.subpage .st-playlist-stats { margin-top:20px; display:flex; gap:25px; color:#8c8e9c; font-size:9px; letter-spacing:.6px; }
+.subpage .st-playlist-stats span { display:flex; flex-direction:column; gap:4px; }
+.subpage .st-playlist-stats strong { color:#303146; font-size:15px; }
+.subpage .st-action-row { margin-top:20px; display:flex; flex-wrap:wrap; gap:9px; }
+.subpage .st-outline-button,.subpage .st-muted-button { padding:10px 15px; border:1px solid #dcddec; border-radius:20px; background:#fff; color:#4d5cff; font-size:11px; font-weight:bold; }
+.subpage .st-outline-button:hover { border-color:#4d5cff; background:#f8f8ff; }
+.subpage .st-muted-button { color:#888; border-color:#e3e3e8; }
+.subpage .st-table-wrap { width:100%; overflow-x:auto; }
+.subpage .st-track-table,.subpage .st-chart-table { width:100%; border-collapse:collapse; white-space:nowrap; }
+.subpage .st-track-table th,.subpage .st-chart-table th { padding:13px 10px; border-top:1px solid #dddfea; border-bottom:1px solid #e7e7ed; color:#9394a0; text-align:left; font-size:10px; font-weight:normal; }
+.subpage .st-track-table td,.subpage .st-chart-table td { padding:13px 10px; border-bottom:1px solid #efeff3; color:#626473; font-size:11px; text-align:left; }
+.subpage .st-track-table tr:hover,.subpage .st-chart-table tr:hover { background:#fafaff; }
+.subpage .st-track-table .st-track-number { color:#9698a5; width:35px; }
+.subpage .st-track-info { display:flex; align-items:center; gap:12px; min-width:210px; }
+.subpage .st-track-info img { width:46px; height:46px; border-radius:7px; object-fit:cover; }
+.subpage .st-track-info strong { display:block; color:#2c2d3d; font-size:12px; }
+.subpage .st-track-info small { display:block; margin-top:4px; color:#9698a5; font-size:10px; }
+.subpage .st-table-action { padding:6px 10px; border:1px solid #e0e1ea; border-radius:14px; background:#fff; color:#4d5cff; font-size:10px; }
+.subpage .st-table-action:hover { border-color:#4d5cff; }
+.subpage .st-favorite-button { border:0; background:transparent; color:#b1b2bd; font-size:18px; }
+.subpage .st-favorite-button.selected { color:#4d5cff; }
+.subpage .st-table-note { margin:12px 0 0; color:#999; font-size:10px; line-height:1.6; }
+.subpage .st-bottom-callout { padding:24px 30px; display:flex; align-items:center; justify-content:space-between; border:1px solid #eeeef5; border-radius:16px; }
+.subpage .st-bottom-callout h2 { margin:0 0 6px; font-size:18px; }
+.subpage .st-bottom-callout p:not(.st-eyebrow) { margin:0; color:#898b98; font-size:11px; }
+.subpage .st-chart-feature { min-height:245px; display:flex; overflow:hidden; border-radius:20px; background:#262740; }
+.subpage .st-chart-feature-copy { width:38%; padding:34px; color:#fff; }
+.subpage .st-chart-feature-copy .st-eyebrow { color:#bfc3ff; }
+.subpage .st-chart-feature-copy h2 { margin:0 0 12px; font-size:25px; line-height:1.35; }
+.subpage .st-chart-feature-copy p:not(.st-eyebrow) { color:#d1d2e0; font-size:12px; line-height:1.7; }
+.subpage .st-chart-top-three { width:62%; padding:20px 25px; display:flex; align-items:center; gap:14px; }
+.subpage .st-chart-podium-card { display:block; width:33.333%; min-width:0; padding:11px; border-radius:13px; background:rgba(255,255,255,.10); color:#fff; }
+.subpage .st-chart-podium-card img { width:100%; height:100px; object-fit:cover; border-radius:9px; }
+.subpage .st-chart-podium-card span { display:block; margin-top:10px; color:#c6c9ff; font-size:9px; }
+.subpage .st-chart-podium-card strong { display:block; margin-top:4px; overflow:hidden; color:#fff; font-size:13px; text-overflow:ellipsis; }
+.subpage .st-chart-podium-card small { display:block; margin-top:4px; color:#d1d2e0; font-size:9px; }
+.subpage .st-chart-date { min-width:140px; padding:14px 18px; border-radius:12px; background:#f6f6ff; text-align:right; }
+.subpage .st-chart-date span { display:block; color:#999; font-size:9px; letter-spacing:1px; }
+.subpage .st-chart-date strong { display:block; margin-top:7px; color:#4d5cff; font-size:12px; }
+.subpage .st-chart-tabs { margin:22px 0; }
+.subpage .st-chart-tabs button { padding:9px 19px; }
+.subpage .st-chart-table .st-rank-number { width:45px; color:#4d5cff; font-size:18px; font-weight:bold; }
+.subpage .st-chart-table .st-chart-song { min-width:180px; }
+.subpage .st-chart-table .st-chart-song strong { display:block; color:#303146; font-size:12px; }
+.subpage .st-chart-table .st-chart-song small { display:block; margin-top:4px; color:#999; font-size:10px; }
+
+/* Theme collection and recommendations */
+.subpage .st-hero-themes .st-hero-copy { width:56%; }
+.subpage .st-hero-themes .st-hero-image { width:44%; }
+.subpage .st-theme-card { width:calc(33.333% - 18px); margin-bottom:25px; }
+.subpage .st-theme-card .st-card-image { height:190px; }
+.subpage .st-theme-card .st-card-body { padding:14px 4px; }
+.subpage .st-theme-card .st-card-body h3 { font-size:17px; }
+.subpage .st-theme-card .st-card-body p { min-height:36px; }
+.subpage .st-page-title-row { min-height:180px; padding:30px 0 24px; display:flex; align-items:center; justify-content:space-between; }
+.subpage .st-page-title-row h1 { margin:0 0 10px; color:#25263a; font-size:32px; line-height:1.27; letter-spacing:-.9px; }
+.subpage .st-page-title-row p:not(.st-eyebrow) { margin:0; color:#818391; font-size:13px; line-height:1.7; }
+.subpage .st-recommend-mark,.subpage .st-account-mark { width:170px; height:130px; display:flex; flex-direction:column; justify-content:center; align-items:center; border-radius:20px; background:#f1f2ff; color:#4d5cff; }
+.subpage .st-recommend-mark span,.subpage .st-account-mark span { font-size:40px; font-weight:bold; letter-spacing:-3px; }
+.subpage .st-recommend-mark strong { margin-top:5px; font-size:9px; text-align:center; letter-spacing:1.4px; line-height:1.5; }
+.subpage .st-recommend-layout { display:flex; gap:20px; }
+.subpage .st-recommend-form-card,.subpage .st-recommend-result-card { width:50%; min-height:350px; padding:30px; border:1px solid #ececf2; border-radius:18px; }
+.subpage .st-recommend-form-card { background:#fff; }
+.subpage .st-recommend-form-card h2 { margin:0 0 24px; font-size:21px; }
+.subpage .st-choice-group { margin-bottom:17px; }
+.subpage .st-choice-group label { display:block; margin-bottom:8px; color:#545666; font-size:11px; font-weight:bold; }
+.subpage .st-choice-group input,.subpage .st-choice-group select { width:100%; height:44px; padding:0 13px; border:1px solid #e1e2ea; border-radius:10px; background:#fff; color:#464857; font-size:12px; }
+.subpage .st-primary-button { width:100%; min-height:44px; padding:11px 16px; border:1px solid #4d5cff; border-radius:10px; background:#4d5cff; color:#fff; font-size:12px; font-weight:bold; }
+.subpage .st-primary-button span { margin-left:10px; }
+.subpage .st-form-note { margin:12px 0 0; color:#9a9ba6; font-size:10px; line-height:1.6; }
+.subpage .st-recommend-result-card { background:#f4f4ff; }
+.subpage .st-result-heading { display:flex; align-items:center; justify-content:space-between; }
+.subpage .st-result-heading .st-eyebrow { margin:0; }
+.subpage .st-result-heading span { color:#4d5cff; font-size:25px; }
+.subpage .st-result-empty { min-height:250px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+.subpage .st-result-empty strong { color:#33354b; font-size:22px; line-height:1.4; }
+.subpage .st-result-empty p { color:#9091a1; font-size:12px; line-height:1.6; }
+.subpage .st-result-card { margin-top:22px; }
+.subpage .st-result-card img { width:100%; height:145px; object-fit:cover; border-radius:12px; }
+.subpage .st-result-card h3 { margin:14px 0 7px; font-size:20px; }
+.subpage .st-result-card p { margin:0; color:#77798a; font-size:12px; line-height:1.6; }
+.subpage .st-result-actions { margin-top:15px; display:flex; gap:8px; flex-wrap:wrap; }
+.subpage .st-result-actions a,.subpage .st-result-actions button { padding:9px 13px; border:1px solid #4d5cff; border-radius:17px; background:#fff; color:#4d5cff; font-size:10px; font-weight:bold; }
+
+/* MY MUSIC and account */
+.subpage .st-my-count { width:160px; height:145px; padding:20px; display:flex; flex-direction:column; justify-content:center; border-radius:18px; background:#f1f2ff; text-align:center; }
+.subpage .st-my-count span { color:#74769a; font-size:10px; letter-spacing:1px; }
+.subpage .st-my-count strong { margin:4px 0; color:#4d5cff; font-size:42px; line-height:1; }
+.subpage .st-my-count small { color:#999; font-size:9px; letter-spacing:1px; }
+.subpage .st-mymusic-panel { padding:25px 28px; border:1px solid #ececf2; border-radius:18px; }
+.subpage .st-mymusic-tools { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-bottom:18px; border-bottom:1px solid #eee; }
+.subpage .st-mymusic-tools>div:first-child { flex:1; min-width:230px; }
+.subpage .st-mymusic-tools h2 { margin:0 0 6px; font-size:21px; }
+.subpage .st-mymusic-tools p:not(.st-eyebrow) { margin:0; color:#888; font-size:11px; }
+.subpage .st-mymusic-actions { display:flex; flex-shrink:0; gap:8px; white-space:nowrap; }
+.subpage .st-my-song-list { margin:0; padding:0; list-style:none; }
+.subpage .st-my-song-list li { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:15px; border-bottom:1px solid #f0f0f3; }
+.subpage .st-my-song-left { display:flex; align-items:center; gap:13px; min-width:0; }
+.subpage .st-my-song-left img { width:48px; height:48px; object-fit:cover; border-radius:8px; }
+.subpage .st-my-song-left strong { display:block; color:#303146; font-size:12px; }
+.subpage .st-my-song-left small { display:block; margin-top:5px; color:#999; font-size:10px; }
+.subpage .st-my-song-actions { display:flex; gap:7px; align-items:center; }
+.subpage .st-my-song-actions a,.subpage .st-my-song-actions button { padding:7px 10px; border:1px solid #e1e1ea; border-radius:15px; background:#fff; color:#666; font-size:10px; }
+.subpage .st-my-song-actions a { color:#4d5cff; }
+.subpage .st-small-info { margin-top:20px; padding:14px 18px; border-radius:10px; background:#fafaff; }
+.subpage .st-small-info p { margin:0; color:#898a98; font-size:11px; line-height:1.6; }
+.subpage .st-small-info strong { color:#4d5cff; }
+.subpage .st-account-mark small { margin-top:5px; font-size:9px; letter-spacing:1px; }
+.subpage .st-account-grid { display:flex; gap:18px; align-items:stretch; }
+.subpage .st-account-card { width:50%; padding:27px; border:1px solid #ececf2; border-radius:17px; background:#fff; }
+.subpage .st-account-card h2 { margin:0 0 7px; font-size:21px; }
+.subpage .st-account-desc { margin:0 0 20px; color:#8b8d99; font-size:11px; }
+.subpage .st-signup-card { background:#fbfbff; }
+.subpage .st-choice-row { display:flex; gap:10px; }
+.subpage .st-choice-row .st-choice-group { width:50%; }
+.subpage .st-profile-status { padding:23px 25px; border-radius:16px; background:#f6f6ff; }
+.subpage .st-profile-status h2 { margin:0; font-size:19px; }
+.subpage .st-profile-summary { min-height:45px; margin:15px 0; padding:13px 16px; border-radius:10px; background:#fff; color:#777; font-size:12px; }
+.subpage .st-profile-summary p { margin:0; }
+.subpage .st-profile-status .st-muted-button { float:right; }
+.subpage .st-account-note { margin:14px 0 0; }
+
+/* Player pages */
+.subpage .st-player-stage { min-height:390px; padding:28px; display:flex; align-items:center; gap:38px; border-radius:22px; background:#f1f2ff; }
+.subpage .st-player-art { width:340px; min-width:340px; height:340px; position:relative; }
+.subpage .st-player-art img { width:100%; height:100%; object-fit:cover; border-radius:17px; }
+.subpage .st-player-art span { position:absolute; left:14px; bottom:14px; padding:7px 10px; border-radius:12px; background:rgba(20,20,35,.65); color:#fff; font-size:9px; letter-spacing:1px; }
+.subpage .st-player-info { flex-grow:1; min-width:0; }
+.subpage .st-player-info h1 { margin:0 0 7px; color:#25263a; font-size:40px; letter-spacing:-1.3px; }
+.subpage .st-player-artist { margin:0; color:#595c74; font-size:16px; font-weight:bold; }
+.subpage .st-player-tagline { max-width:470px; margin:20px 0 0; color:#77798a; font-size:12px; line-height:1.7; }
+.subpage .st-player-chips { margin-top:16px; display:flex; gap:7px; }
+.subpage .st-player-chips span { padding:6px 10px; border-radius:12px; background:#fff; color:#6f72a4; font-size:9px; }
+.subpage .st-audio { width:100%; max-width:490px; height:42px; margin-top:19px; }
+.subpage .st-player-actions { margin-top:14px; display:flex; flex-wrap:wrap; gap:8px; }
+.subpage .st-player-actions .st-primary-button { width:auto; min-width:170px; }
+.subpage .st-player-details { margin-top:40px; }
+.subpage .st-player-detail-grid { display:flex; gap:14px; }
+.subpage .st-player-detail-grid article { width:33.333%; min-height:155px; padding:20px; border:1px solid #ececf2; border-radius:14px; }
+.subpage .st-player-detail-grid article>span { color:#4d5cff; font-size:9px; letter-spacing:1px; }
+.subpage .st-player-detail-grid h3 { margin:10px 0 7px; color:#303146; font-size:14px; }
+.subpage .st-player-detail-grid p { margin:0; color:#888a96; font-size:11px; line-height:1.6; }
+.subpage .st-player-detail-grid a { display:inline-block; margin-top:12px; color:#4d5cff; font-size:11px; font-weight:bold; }
+.subpage .st-next-track { margin-top:10px; display:flex; align-items:center; gap:10px; }
+.subpage .st-next-track img { width:53px; height:53px; object-fit:cover; border-radius:8px; }
+.subpage .st-next-track h3 { margin:0 0 4px; font-size:12px; }
+.subpage .st-next-track p { font-size:10px; }
+.subpage .subpage-footer { margin-top:65px; }
+.subpage .st-loading { padding:26px 12px; color:#999; text-align:center; font-size:12px; }
+.subpage .st-empty-state { width:100%; padding:36px 20px; border:1px dashed #dcdce8; border-radius:13px; color:#8a8b99; text-align:center; font-size:12px; line-height:1.7; }
+
+@media screen and (max-width:1050px) {
+  .subpage .st-main,.subpage .nol-header-main,.subpage .nol-tabs,.subpage .site-footer { width:90%; }
+  .subpage .st-destination-card,.subpage .st-genre-card { width:calc(33.333% - 18px); }
+  .subpage .st-theme-card { width:calc(50% - 18px); }
+  .subpage .st-player-art { width:300px; min-width:300px; height:300px; }
+  .subpage .st-hero-stats { flex-wrap:wrap; gap:16px; }
+  .subpage .st-playlist-hero { display:block; }
+  .subpage .st-playlist-cover { width:100%; min-width:0; height:260px; padding:18px; }
+  .subpage .st-playlist-cover img { min-height:220px; }
+  .subpage .st-playlist-copy { width:100%; padding:26px 28px; }
+  .subpage .st-chart-feature { display:block; }
+  .subpage .st-chart-feature-copy,.subpage .st-chart-top-three { width:100%; }
+  .subpage .st-chart-top-three { padding:10px 24px 22px; }
+  .subpage .st-mymusic-tools { flex-wrap:wrap; gap:12px; }
+  .subpage .st-mymusic-actions { margin-left:auto; }
+}
+@media screen and (max-width:760px) {
+  .subpage .st-main { width:92%; }
+  .subpage .st-breadcrumb { margin:17px 0 13px; font-size:10px; }
+  .subpage .st-hero { display:block; }
+  .subpage .st-hero-copy,.subpage .st-hero-themes .st-hero-copy { width:100%; padding:30px 25px; }
+  .subpage .st-hero-copy h1 { font-size:27px; }
+  .subpage .st-hero-image,.subpage .st-hero-themes .st-hero-image { width:100%; height:190px; min-height:190px; }
+  .subpage .st-hero-stats { gap:17px; }
+  .subpage .st-section { margin-top:40px; }
+  .subpage .st-section-heading h2 { font-size:21px; }
+  .subpage .st-filter-row { align-items:flex-start; flex-direction:column; }
+  .subpage .st-filter-tabs { flex-wrap:wrap; }
+  .subpage .st-search-inline { width:100%; }
+  .subpage .st-destination-card,.subpage .st-genre-card { width:calc(50% - 18px); }
+  .subpage .st-theme-card { width:calc(50% - 18px); }
+  .subpage .st-city-hero { height:290px; }
+  .subpage .st-city-hero-copy { left:25px; right:20px; top:34px; }
+  .subpage .st-city-hero-copy h1 { font-size:27px; }
+  .subpage .st-facts-row { flex-wrap:wrap; }
+  .subpage .st-facts-row div { width:50%; margin:7px 0; padding:7px 12px; }
+  .subpage .st-route-steps { flex-wrap:wrap; }
+  .subpage .st-route-steps>div { width:50%; margin:0 0 12px; padding:12px; }
+  .subpage .st-feature-strip,.subpage .st-bottom-callout { align-items:flex-start; flex-direction:column; gap:18px; padding:24px; }
+  .subpage .st-playlist-hero { display:block; }
+  .subpage .st-playlist-cover { width:100%; height:235px; padding:15px; }
+  .subpage .st-playlist-cover img { min-height:205px; }
+  .subpage .st-playlist-cover span { left:29px; bottom:26px; }
+  .subpage .st-playlist-copy { padding:25px; }
+  .subpage .st-playlist-copy h1 { font-size:32px; }
+  .subpage .st-chart-feature { display:block; }
+  .subpage .st-chart-feature-copy,.subpage .st-chart-top-three { width:100%; }
+  .subpage .st-chart-top-three { padding:8px 15px 20px; }
+  .subpage .st-chart-podium-card img { height:75px; }
+  .subpage .st-page-title-row { min-height:145px; }
+  .subpage .st-page-title-row h1 { font-size:26px; }
+  .subpage .st-recommend-layout,.subpage .st-account-grid { display:block; }
+  .subpage .st-recommend-form-card,.subpage .st-recommend-result-card,.subpage .st-account-card { width:100%; min-height:auto; margin-bottom:14px; padding:23px; }
+  .subpage .st-recommend-result-card { min-height:300px; }
+  .subpage .st-recommend-mark,.subpage .st-account-mark { width:105px; height:100px; }
+  .subpage .st-recommend-mark span,.subpage .st-account-mark span { font-size:30px; }
+  .subpage .st-player-stage { display:block; padding:19px; }
+  .subpage .st-player-art { width:100%; min-width:0; height:300px; margin-bottom:24px; }
+  .subpage .st-player-info h1 { font-size:31px; }
+  .subpage .st-player-detail-grid { display:block; }
+  .subpage .st-player-detail-grid article { width:100%; margin-bottom:10px; }
+  .subpage .st-mymusic-tools { align-items:flex-start; flex-direction:column; gap:16px; }
+  .subpage .st-mymusic-actions { flex-wrap:wrap; }
+  .subpage .st-my-song-list li { align-items:flex-start; padding:13px 0; }
+  .subpage .st-my-song-actions { flex-direction:column; }
+  .subpage .st-choice-row { display:block; }
+  .subpage .st-choice-row .st-choice-group { width:100%; }
+}
+@media screen and (max-width:480px) {
+  .subpage .st-destination-card,.subpage .st-genre-card,.subpage .st-theme-card { width:calc(100% - 18px); }
+  .subpage .st-card-image { height:190px; }
+  .subpage .st-genre-card .st-card-image { height:185px; }
+  .subpage .st-theme-card .st-card-image { height:205px; }
+  .subpage .st-page-title-row { align-items:flex-start; }
+  .subpage .st-page-title-row h1 { font-size:23px; }
+  .subpage .st-my-count { width:105px; height:110px; padding:10px; }
+  .subpage .st-my-count strong { font-size:32px; }
+  .subpage .st-account-mark { display:none; }
+  .subpage .st-chart-table th:nth-child(4),.subpage .st-chart-table td:nth-child(4) { display:none; }
+  .subpage .st-track-table th:nth-child(4),.subpage .st-track-table td:nth-child(4) { display:none; }
+  .subpage .st-profile-status .st-muted-button { float:none; }
+}
