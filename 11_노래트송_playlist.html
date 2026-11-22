@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="11_노래트송_김도연(2514537) 김의린(2514088) 남현서(2516120) 조연우(2514298)">
+<meta name="description" content="SoundTrip은 여행지의 분위기와 음악을 연결해 탐색하는 웹 애플리케이션입니다.">
+<title>SoundTrip | J-Indie 플레이리스트</title>
+<link rel="stylesheet" href="11_노래트송_style.css">
+<script src="11_노래트송_app.js" defer></script>
+</head><body>
+<div class="top-accent"></div>
+<header class="nol-header">
+  <div class="nol-header-main">
+    <a class="nol-logo" href="11_노래트송_index.html" aria-label="SoundTrip 홈"><img src="11_logo_header.png" alt="SoundTrip 로고"></a>
+    <div class="nol-search" role="search">
+      <label class="sr-only" for="globalSearchInput">SoundTrip 검색</label>
+      <input id="globalSearchInput" type="search" placeholder="도시, 장르, 곡을 검색해보세요" autocomplete="off">
+      <button id="globalSearchButton" type="button" aria-label="검색">⌕</button>
+    </div>
+    <nav class="account-menu" aria-label="회원 메뉴">
+      <a href="11_노래트송_account.html#loginSection">로그인</a><span>|</span>
+      <a href="11_노래트송_account.html#signupSection">회원가입</a><span>|</span>
+      <a href="11_노래트송_mymusic.html">MY MUSIC</a>
+    </nav>
+  </div>
+  <nav class="nol-tabs" aria-label="주요 메뉴">
+    <a class="all-menu" href="11_노래트송_destinations.html">☰ &nbsp;전체 카테고리</a>
+    <span class="tab-divider" aria-hidden="true"></span>
+    <a class="active" href="11_노래트송_index.html">홈</a>
+    <a href="11_노래트송_destinations.html">여행지</a>
+    <a href="11_노래트송_chart.html">차트</a>
+    <a href="11_노래트송_themes.html">테마</a>
+    <a href="11_노래트송_recommend.html">취향추천</a>
+  </nav>
+</header>
+<section class="page-hero"><h1>J-Indie 플레이리스트</h1><p>도쿄의 화려한 불빛부터 늦은 밤의 잔잔한 감성까지, 도시의 분위기를 곡 목록으로 탐색합니다.</p></section>
+<main class="playlist-page">
+
+  <!-- 페이지 경로 -->
+  <div class="playlist-breadcrumb">
+    <a href="11_노래트송_index.html">홈</a>
+    <span>›</span>
+    <a href="11_노래트송_genre.html">일본 음악 장르</a>
+    <span>›</span>
+    <span>J-Indie</span>
+  </div>
+
+  <!-- 플레이리스트 대표 영역 -->
+  <section class="playlist-hero">
+
+    <div class="playlist-cover">
+      <img src="11_tokyo.png" alt="도쿄 플레이리스트 커버">
+    </div>
+
+    <div class="playlist-info">
+
+      <p class="playlist-label">플레이리스트</p>
+
+      <h1>J-Indie 플레이리스트</h1>
+
+      <p class="playlist-description">
+        도쿄의 화려한 불빛부터 늦은 밤의 잔잔한 감성까지,
+        도시의 분위기를 담은 일본 인디 음악을 만나보세요.
+      </p>
+
+      <p class="playlist-meta">
+        SOUNDTRIP · 총 7곡 · 약 28분
+      </p>
+
+      <div class="playlist-actions">
+
+        <a class="playlist-play-button"
+           href="11_노래트송_playing-1.html">
+          <img src="11_play.svg" alt="">
+          전체 듣기
+        </a>
+
+        <button class="playlist-icon-button" type="button"
+                id="playlistLikeButton"
+                aria-label="플레이리스트 좋아요"
+                aria-pressed="false">
+            <img src="11_favorite.svg" alt="">
+        </button>
+
+        <button class="playlist-icon-button"
+                type="button"
+                id="playlistShareButton"
+                aria-label="공유">
+          <img src="11_share.svg" alt="">
+        </button>
+
+        <button class="playlist-icon-button"
+                type="button"
+                id="playlistAddButton"
+                aria-label="플레이리스트 전체 MY MUSIC에 담기">
+          <img src="11_add.svg" alt="">
+        </button>
+
+        <a class="playlist-back-link"
+           href="11_노래트송_genre.html">
+          장르로 돌아가기
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 곡 목록 -->
+  <section class="playlist-track-section">
+
+    <div class="playlist-section-heading">
+      <div>
+        <h2>곡 목록</h2>
+        <p>도쿄의 분위기를 담은 7개의 음악</p>
+      </div>
+    </div>
+
+    <div class="playlist-table-wrap">
+      <table class="song-table playlist-song-table">
+
+        <thead>
+          <tr>
+            <th class="track-number-heading">#</th>
+            <th>곡</th>
+            <th class="track-album-heading">앨범</th>
+            <th class="track-duration-heading" title="재생 시간" aria-label="재생 시간">
+              <img src="11_time.svg" alt="재생 시간">
+            </th>
+            <th class="track-actions-heading"> </th>
+          </tr>
+        </thead>
+
+        <tbody id="playlistBody" data-json-area>
+        </tbody>
+
+      </table>
+    </div>
+
+  </section>
+
+</main>
+<footer class="site-footer">
+  <p><strong>SOUNDTRIP</strong> · 여행지를 음악으로 탐색하는 웹 애플리케이션</p>
+  <p>이용약관 | 위치기반서비스 이용약관 | 개인정보처리방침 | 청소년보호정책</p>
+  <p>(주)노래트송 서울특별시 용산구 청파로47길 100</p>
+</footer>
+<nav class="mobile-bottom-nav" aria-label="모바일 하단 메뉴">
+  <a href="11_노래트송_destinations.html"><strong>☰</strong>여행지</a>
+  <a href="11_노래트송_chart.html"><strong>⌕</strong>차트</a>
+  <a href="11_노래트송_index.html"><strong>⌂</strong>홈</a>
+  <a href="11_노래트송_mymusic.html"><strong>♡</strong>MY MUSIC</a>
+  <a href="11_노래트송_recommend.html"><strong>✦</strong>추천</a>
+</nav></body></html>
