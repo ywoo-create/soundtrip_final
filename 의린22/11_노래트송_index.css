@@ -114,10 +114,10 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .prog em { margin-left: auto; font-style: normal; color: #3b3f5c; letter-spacing: 0; font-weight: 600; }
 .fields { display: flex; }
 .f { padding: 0 22px; border-right: 1px solid #e6e9f5; display: block; }
-.f:first-child { padding-left: 0; width: 50%; }
-.f:nth-child(2) { width: 50%; border-right: 0; }
-.f:nth-child(3) { width: 0; padding: 0; border: 0; }
-.f.last { border: 0; width: 0; padding: 0; }
+.f:first-child { padding-left: 0; width: 17%; }
+.f:nth-child(2) { width: 31%; }
+.f:nth-child(3) { width: 30%; }
+.f.last { border: 0; width: 22%; }
 .f small { display: block; font-size: 10px; letter-spacing: 1.6px; color: #3b3f5c; font-weight: 800; margin-bottom: 6px; }
 .f b { display: block; font-size: 24px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; }
 .f b span { font-size: 13px; color: #3b3f5c; font-weight: 600; margin-left: 6px; }
@@ -144,18 +144,12 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 
 /* ===== 출발 카드 ===== */
 .flights { display: flex; flex-wrap: wrap; }
-.fc { display: block; width: 23.5%; margin: 0 2% 26px 0; background-color: #ffffff; border-radius: 20px; border: 1px solid #e6e9f5; overflow: hidden; }
+.fc { display: block; width: 23.5%; margin: 0 2% 26px 0; background-color: #ffffff; border-radius: 20px; border: 1px solid #e6e9f5; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);}
 .fc:nth-child(4n) { margin-right: 0; }
 .fc:hover { border-color: #4d5cff; }
 .fc .ph { height: 200px; position: relative; overflow: hidden; }
-.fc .code { position: absolute; left: 14px; top: 14px; z-index: 2; background-color: #ffffff; border-radius: 999px; font-size: 11px; font-weight: 700; padding: 5px 11px; letter-spacing: 1px; }
 .fc .city { position: absolute; left: 16px; bottom: 14px; z-index: 2; color: #ffffff; font-size: 26px; font-weight: 800; letter-spacing: 1px; }
 .fc .city small { display: block; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
-.fc .bd { display: flex; align-items: center; justify-content: space-between; padding: 15px 18px; border-top: 2px dashed #d5dcf7; }
-.fc .bd small { display: block; font-size: 10px; letter-spacing: 1.5px; color: #3b3f5c; font-weight: 800; margin-bottom: 3px; }
-.fc .bd b { font-size: 14px; font-weight: 800; }
-.fc .bd span { font-size: 13px; font-weight: 800; color: #4d5cff; }
-.fc .bd.home-bd { justify-content: flex-end; }
 
 /* ===== 순위 / 스탬프 ===== */
 .two { display: flex; }
@@ -461,3 +455,25 @@ h1 { font-weight: 800; letter-spacing: -1px; }
   line-height: 1.6;
   font-weight: 600;
 }
+
+
+/* ===== 메인페이지 요청 수정 ===== */
+/* 탑승권은 TO / GATE 두 칸만 사용 */
+.pass .fields .f { width: 50%; }
+.pass .fields .f:first-child { width: 50%; padding-left: 0; }
+.pass .fields .f:nth-child(2) { width: 50%; border-right: 0; }
+
+/* 공지 전체를 감싸는 둥근 직사각형 */
+.notice {
+  background-color: #ffffff;
+  border: 1px solid #e1e6fa;
+  border-radius: 16px;
+  padding: 14px 18px;
+}
+
+/* 여행 카드의 TYO 배지 / 항공편 번호 제거 */
+.fc .code { display: none; }
+.fc .bd > div { display: none; }
+.fc .bd { justify-content: flex-end; }
+
+
