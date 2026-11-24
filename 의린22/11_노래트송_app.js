@@ -590,9 +590,9 @@ function renderPlayerPage() {
   const description = document.getElementById("trackDescription");
   if (description != null) {
     if (id == "lemon") {
-      description.innerText = "도쿄의 밤과 늦은 산책을 떠올리게 하는 SoundTrip 대표 추천곡입니다.";
+      description.innerText = "작곡 Kenshi Yonezu(켄시 요네즈/米津 玄師)  작사 Kenshi Yonezu(켄시 요네즈/米津 玄師)";
     } else {
-      description.innerText = "차분한 보컬과 섬세한 멜로디가 어우러진 SoundTrip 추천곡입니다.";
+      description.innerText = "	보컬 tuki.  작사 tuki.";
     }
   }
   document.getElementById("trackCover").src = track.image;
@@ -659,11 +659,11 @@ function renderPlayerPage() {
       '<span>다음곡</span>' +
       '<div class="st-next-track"><img src="' + cardTrack.image + '" alt="' + escapeHtml(cardTrack.title) + ' 앨범 이미지">' +
       '<div><h3>' + escapeHtml(cardTrack.id == "bansanka" ? cardTrack.title + " (Bansanka)" : cardTrack.title) + '</h3><p>' + escapeHtml(cardTrack.artist) + '</p></div></div>' +
-      '<a href="' + cardTrack.playLink + '" class="st-next-track-button"><strong>다음 곡 듣기</strong><span aria-hidden="true">→</span></a>';
+      '<a href="' + cardTrack.playLink + '" class="st-next-track-button"><strong>다음 곡 듣기</strong></a>';
   } else {
     card.innerHTML =
       '<span>다음곡</span><div class="st-next-track"><div><h3>마지막 곡입니다.</h3><p>플레이리스트에서 다른 곡을 선택해보세요.</p></div></div>' +
-      '<a href="' + PAGE_PLAYLIST + '" class="st-next-track-button"><strong>플레이리스트 보기</strong><span aria-hidden="true">→</span></a>';
+      '<a href="' + PAGE_PLAYLIST + '" class="st-next-track-button"><strong>플레이리스트 보기</strong></a>';
   }
 
   // MY MUSIC 담기 버튼을 현재 곡과 연결
