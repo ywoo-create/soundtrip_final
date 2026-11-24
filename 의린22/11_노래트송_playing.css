@@ -1259,8 +1259,9 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 }
 
 .player-page .st-player-stage {
+    margin-top: 34px;
     padding: 36px 44px;
-    border: 1px solid #e6e9f5;
+    border: 0;
     border-radius: 28px;
     background-color: #eef2ff;
 }
