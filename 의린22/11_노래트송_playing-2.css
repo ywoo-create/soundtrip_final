@@ -1275,3 +1275,155 @@ h1 { font-weight: 800; letter-spacing: -1px; }
     padding-bottom: 155px;
   }
 }
+
+/* Playing 페이지 디자인 통일 */
+
+.player-page .st-player-page-heading {
+    margin: 32px 0 28px;
+}
+
+.player-page .st-player-page-heading h1 {
+    color: #14172b;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin: 0 0 10px;
+}
+
+.player-page .st-player-page-heading p {
+    color: #3b3f5c;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* 앨범 커버가 있는 큰 박스 */
+
+.player-page .st-player-stage {
+    padding: 36px 44px;
+    border: 1px solid #e6e9f5;
+    border-radius: 28px;
+    background-color: #eef2ff;
+}
+
+.player-page .st-player-art {
+    border-radius: 16px;
+}
+
+.player-page .st-player-art img {
+    border-radius: 16px;
+}
+
+/* 곡 제목과 가수 */
+
+.player-page .st-player-title-row h1 {
+    color: #14172b;
+}
+
+.player-page .st-player-artist,
+.player-page .st-player-description {
+    color: #3b3f5c;
+}
+
+/* 큰 재생 버튼 */
+
+.player-page .st-player-inline-toggle {
+    background-color: #4d5cff;
+}
+
+.player-page .st-player-inline-toggle:hover {
+    background-color: #3f4de8;
+}
+
+/* MY MUSIC 담기 버튼 */
+
+.player-page .st-player-actions .st-primary-button {
+    min-height: 54px;
+    padding: 15px 26px;
+    border: 1.5px solid #4d5cff;
+    border-radius: 999px;
+    background-color: #4d5cff;
+    color: white;
+    font-size: 15px;
+}
+
+.player-page .st-player-actions .st-primary-button img {
+    display: none;
+}
+
+.player-page .st-player-actions .st-primary-button:hover {
+    background-color: #3f4de8;
+    border-color: #3f4de8;
+}
+
+.player-page .st-player-actions .st-primary-button strong,
+.player-page .st-player-actions .st-primary-button span {
+    color: white;
+}
+
+/* 플레이리스트 돌아가기 버튼 */
+
+.player-page .st-outline-button {
+    min-height: 54px;
+    padding: 15px 24px;
+    border: 1.5px solid #cdd5f7;
+    border-radius: 999px;
+    background-color: white;
+    color: #14172b;
+    font-size: 14px;
+}
+
+.player-page .st-outline-button:hover {
+    border-color: #4d5cff;
+    background-color: #f6f8ff;
+}
+
+/* 곡 정보와 다음 곡 카드 */
+
+.player-page .st-track-summary,
+.player-page .st-track-next-card {
+    border-color: #e6e9f5;
+    border-radius: 22px;
+    background-color: #f6f8ff;
+}
+
+.player-page .st-track-summary h3,
+.player-page .st-track-next-card h3,
+.player-page .st-section-heading h2,
+.player-page .st-lyrics-heading h2 {
+    color: #14172b;
+}
+
+.player-page .st-track-summary p,
+.player-page .st-next-track p,
+.player-page .st-lyrics-text {
+    color: #3b3f5c;
+}
+
+.player-page .st-track-list-link,
+.player-page .st-track-next-card > span {
+    color: #4d5cff;
+}
+
+/* 다음 곡 버튼 */
+
+.player-page .st-next-track-button {
+    background-color: #4d5cff;
+}
+
+.player-page .st-next-track-button:hover {
+    background-color: #3f4de8;
+}
+
+/* 가사 박스 */
+
+.player-page .st-lyrics-card {
+    border-color: #e6e9f5;
+    border-radius: 22px;
+}
+
+.player-page .st-lyrics-content {
+    border-radius: 14px;
+    background-color: #f6f8ff;
+}
