@@ -310,13 +310,15 @@ function renderPass() {
 
 /* --- 출발 카드 (홈, 여행지) --- */
 function renderDestinationCards(box, list) {
-  box.innerHTML = list.map(function(d) {
-    return '<a class="fc" href="' + d.link + '" data-city="' + d.id + '">' +
-      '<div class="ph"><img class="bgimg" src="' + d.image + '" alt=""><div class="shade"></div><span class="code">' + d.code + "</span>" +
-      '<div class="city">' + d.city + "<small>" + d.label + "</small></div></div>" +
-      '<div class="bd"><div><small>FLIGHT</small><b>' + d.flight + "</b></div><span>탑승 ›</span></div></a>";
-  }).join("");
-  bindNav(box);
+    box.innerHTML = list.map(function(d) {
+        return '<a class="fc" href="' + d.link + '" data-city="' + d.id + '">' +
+            '<div class="ph"><img class="bgimg" src="' + d.image + '" alt="">' +
+            '<div class="shade"></div>' +
+            '<div class="city">' + d.city +
+            '<small>' + d.label + '</small></div></div></a>';
+    }).join("");
+
+    bindNav(box);
 }
 
 // 카드를 누르면 선택한 도시/장르를 sessionStorage에 저장하고 이동
