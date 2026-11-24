@@ -67,7 +67,7 @@
       "city": "LONDON",
       "label": "영국 - 런던",
       "area": "유럽",
-      "image": "11_영국 런던.jpg",
+      "image": "11_영국 런던.png",
       "desc": "비 오는 거리와 함께 듣는 차분한 플레이리스트.",
       "link": "11_노래트송_genre.html?city=london",
       "flight": "SD 003",
@@ -80,7 +80,7 @@
       "city": "RIO",
       "label": "브라질 - 리우",
       "area": "아메리카",
-      "image": "11_브라질 리우.jpg",
+      "image": "11_브라질 리우.png",
       "desc": "해변과 노을에 어울리는 밝은 리듬의 음악 여행.",
       "link": "11_노래트송_genre.html?city=rio",
       "flight": "SD 004",
@@ -288,7 +288,7 @@
       "id": "britpop",
       "city": "london",
       "name": "Britpop",
-      "image": "11_영국 런던.jpg",
+      "image": "11_영국 런던.png",
       "desc": "영국 거리의 에너지를 담은 밴드 사운드.",
       "keywords": [
         "밴드",
@@ -301,7 +301,7 @@
       "id": "uk-indie",
       "city": "london",
       "name": "UK Indie",
-      "image": "11_영국 런던.jpg",
+      "image": "11_영국 런던.png",
       "desc": "비 오는 날에 어울리는 감성적인 인디 록.",
       "keywords": [
         "감성",
@@ -314,7 +314,7 @@
       "id": "rainy-acoustic",
       "city": "london",
       "name": "Rainy Acoustic",
-      "image": "11_영국 런던.jpg",
+      "image": "11_영국 런던.png",
       "desc": "카페 창가에서 듣기 좋은 어쿠스틱.",
       "keywords": [
         "잔잔",
@@ -327,7 +327,7 @@
       "id": "bossa-nova",
       "city": "rio",
       "name": "Bossa Nova",
-      "image": "11_브라질 리우.jpg",
+      "image": "11_브라질 리우.png",
       "desc": "부드러운 기타와 속삭이는 보컬의 보사노바.",
       "keywords": [
         "여유",
@@ -340,7 +340,7 @@
       "id": "samba",
       "city": "rio",
       "name": "Samba",
-      "image": "11_브라질 리우.jpg",
+      "image": "11_브라질 리우.png",
       "desc": "축제처럼 흥겨운 리듬의 삼바.",
       "keywords": [
         "리듬",
@@ -353,7 +353,7 @@
       "id": "mpb",
       "city": "rio",
       "name": "MPB",
-      "image": "11_브라질 리우.jpg",
+      "image": "11_브라질 리우.png",
       "desc": "브라질 대중음악의 서정과 멜로디.",
       "keywords": [
         "서정",
@@ -744,7 +744,7 @@
       "cityId": "london",
       "title": "런던, 비 갠 뒤의 저녁",
       "desc": "조용한 거리와 낮은 조명에 어울리는 잔잔한 곡.",
-      "image": "11_영국 런던.jpg",
+      "image": "11_영국 런던.png",
       "mood": [
         "차분함",
         "감성"
@@ -764,7 +764,7 @@
       "cityId": "rio",
       "title": "리우, 해 질 녘 해안 도로",
       "desc": "바다와 노을을 배경으로 듣는 밝은 리듬.",
-      "image": "11_브라질 리우.jpg",
+      "image": "11_브라질 리우.png",
       "mood": [
         "설렘",
         "신남"
