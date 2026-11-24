@@ -588,13 +588,7 @@ function renderPlayerPage() {
   document.getElementById("trackTitle").innerText = displayTitle;
   document.getElementById("trackArtist").innerText = track.artist;
   const description = document.getElementById("trackDescription");
-  if (description != null) {
-    if (id == "lemon") {
-      description.innerText = "작곡 Kenshi Yonezu(켄시 요네즈/米津 玄師)  작사 Kenshi Yonezu(켄시 요네즈/米津 玄師)";
-    } else {
-      description.innerText = "	보컬 tuki.  작사 tuki.";
-    }
-  }
+
   document.getElementById("trackCover").src = track.image;
   document.getElementById("dockCover").src = track.image;
   document.getElementById("dockTitle").innerText = displayTitle;
@@ -602,13 +596,13 @@ function renderPlayerPage() {
   document.getElementById("stAudio").src = track.audio;
 
   if (id == "lemon") {
-    document.getElementById("trackStoryTitle").innerText = "도쿄의 밤을 담은 J-Indie";
+    document.getElementById("trackStoryTitle").innerText = "슬픈 사랑을 말하는 J-Indie";
     document.getElementById("trackStoryText").innerText =
-      "도쿄의 네온과 늦은 밤의 산책을 떠올리게 하는 감성적인 분위기의 곡입니다. 일본 인디 음악 특유의 섬세한 감성을 느껴보세요.";
+      "지나간 인연을 떠올리는 감성적인 분위기의 곡이에요.\n일본 인디 음악 특유의 섬세한 감성을 느껴보세요.";
   } else {
-    document.getElementById("trackStoryTitle").innerText = "잔잔한 밤의 감성을 담은 J-Indie";
+    document.getElementById("trackStoryTitle").innerText = "잔잔하게 마음을 표현하는 J-Indie";
     document.getElementById("trackStoryText").innerText =
-      "차분한 보컬과 섬세한 멜로디가 어우러져 늦은 밤 조용히 음악을 감상하는 순간에 잘 어울리는 곡입니다.";
+      "차분한 보컬과 멜로디가 돋보이는 곡이에요.\n사랑하는 순간의 감정을 솔직하게 표현한 곡입니다.";
   }
 
   let index = 0;
