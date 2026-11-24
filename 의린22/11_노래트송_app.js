@@ -700,10 +700,6 @@ function renderPlayerPage() {
   addButton.setAttribute("data-add-song", id);
   bindActions(document.getElementById("stPlayerActions"));
 
-  const footerLikeButton = document.getElementById("likeTrackButton");
-  const footerAddButton = document.getElementById("addTrackButton");
-  if (footerLikeButton != null) footerLikeButton.setAttribute("data-like-song", id);
-  if (footerAddButton != null) footerAddButton.setAttribute("data-add-song", id);
   bindActions(document.getElementById("stCustomPlayer"));
 }
 
