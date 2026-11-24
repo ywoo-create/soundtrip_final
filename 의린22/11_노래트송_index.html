@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="11_노래트송_김도연(2514537) 김의린(2514088) 남현서(2516120) 조연우(2514298)">
+<meta name="description" content="SoundTrip은 여행지의 분위기와 음악을 연결해 탐색하는 음악 여행 웹 애플리케이션입니다.">
+<title>SoundTrip | 음악으로 떠나는 여행</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="11_노래트송_index.css">
+<script defer src="11_노래트송_header.js"></script>
+<script defer src="11_노래트송_app.js"></script>
+</head>
+<body class="">
+<div class="top-accent"></div>
+<header class="site-header">
+  <div class="c hdr-main">
+    <a class="nol-logo" href="11_노래트송_index.html" aria-label="SoundTrip 홈"><img src="11_logo_header.png" alt="SoundTrip 로고"></a>
+    <div class="nol-search" role="search">
+      <input id="globalSearchInput" type="search" placeholder="도시, 장르, 곡을 검색해보세요" autocomplete="off">
+      <button id="globalSearchButton" type="button" aria-label="검색"><img src="11_search.svg" alt=""></button>
+    </div>
+    <nav class="account-menu" aria-label="회원 메뉴">
+      <a href="11_노래트송_account.html">로그인</a><span>|</span>
+      <a href="11_노래트송_signup.html">회원가입</a><span>|</span>
+      <a href="11_노래트송_mymusic.html">MY MUSIC</a>
+    </nav>
+  </div>
+  <div class="nav-wrap">
+    <nav class="c nol-tabs" aria-label="주요 메뉴">
+      <button type="button" class="all-menu" id="categoryButton" aria-controls="categoryMenu" aria-expanded="false">
+        <img src="11_menu.svg" alt=""><span>전체 카테고리</span>
+      </button>
+      <span class="tab-divider" aria-hidden="true"></span>
+      <a href="11_노래트송_index.html" class="active">홈</a><a href="11_노래트송_destinations.html">여행지</a><a href="11_노래트송_chart.html">차트</a><a href="11_노래트송_recommend.html">취향추천</a>
+      <div class="category-menu" id="categoryMenu" aria-label="전체 카테고리">
+        <div class="category-column">
+          <h3>여행 탐색</h3>
+          <a href="11_노래트송_destinations.html">여행지</a>
+        </div>
+        <div class="category-column">
+          <h3>음악 탐색</h3>
+          <a href="11_노래트송_playlist.html">플레이리스트</a>
+          <a href="11_노래트송_chart.html">차트</a>
+        </div>
+        <div class="category-column">
+          <h3>나만의 SoundTrip</h3>
+          <a href="11_노래트송_recommend.html">취향추천</a>
+          <a href="11_노래트송_mymusic.html">MY MUSIC</a>
+          <a href="11_노래트송_account.html">로그인</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="hero">
+<img class="bgimg" id="heroImg" src="11_tokyomain2.jpg" alt="">
+<div class="hero-shade"></div>
+<div class="c hero-in">
+<div class="hero-text">
+
+<h1 id="heroTitle"></h1>
+<p class="hero-desc" id="heroText"></p>
+<a class="hero-link" id="heroLink" href="11_노래트송_destinations.html"></a>
+</div>
+<div class="hero-ctl"><span class="dots" id="heroDots"></span><span id="heroCount"></span>
+<button class="ar" id="heroPrev" type="button" aria-label="이전 슬라이드"><img src="11_chevron-left-w.svg" alt=""></button>
+<button class="ar" id="heroNext" type="button" aria-label="다음 슬라이드"><img src="11_chevron-right-w.svg" alt=""></button></div>
+</div>
+</section>
+<div class="c">
+<form class="pass" id="passForm">
+<div class="main">
+<span id="passHint" class="sr-only"></span>
+<div class="fields">
+<div class="f"><small>FROM</small><b>서울<span>SEL</span></b></div>
+<label class="f"><small>TO</small><select id="passCity" class="empty"><option value="">도시를 선택하세요</option></select></label>
+<label class="f"><small>GATE · 장르</small><select id="passGate" class="empty" disabled><option value="">도시 선택 후</option></select></label>
+<span id="passFlight" class="sr-only">—</span>
+</div>
+</div>
+<div class="stub"><button class="btn" id="passButton" type="submit" disabled>탑승하기</button></div>
+</form>
+<div class="notice"><span>공지</span><p id="noticeText"></p></div>
+<nav class="cats" id="shortcutBox"></nav>
+<section class="sec">
+<div class="sh"><div><h2>오늘 출발하는 음악 여행</h2><p>탑승할 도시를 선택해보세요.</p></div><a href="11_노래트송_destinations.html">전체 여행지 ›</a></div>
+<div class="flights" id="popularDestinationCards"></div>
+</section>
+<section class="sec two">
+<div>
+<div class="sh"><div><h2>이번 주 탑승 순위</h2></div><a href="11_노래트송_chart.html">차트 전체보기 ›</a></div>
+<div class="rk" id="chartPreview"></div>
+</div>
+<div>
+<div class="sh"><div><h2>내 여행 스탬프</h2></div></div>
+<div class="stamps"><p id="stampMessage">아직 도착한 도시가 없어요.<br>음악을 끝까지 들으면 도착 스탬프가 찍혀요.</p><div class="sg" id="stampBoxHome"></div></div>
+</div>
+</section>
+<section class="rec">
+<div><h2>기분과 여행 상황만 고르면<br>SoundTrip이 음악 여행을 추천해드려요</h2><a class="btn" href="11_노래트송_recommend.html">나에게 맞는 여행 음악 찾기</a></div>
+<div class="moods"><span>설렘</span><span>산책</span><span>드라이브</span></div>
+</section>
+</div>
+</main>
+<footer class="site-footer"><div class="c" id="siteFooter"></div></footer>
+</body>
+</html>

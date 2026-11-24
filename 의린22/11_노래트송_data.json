@@ -1,0 +1,1024 @@
+{
+  "notice": "도쿄 음악 여행이 열렸어요. 여행지를 고르고 장르와 플레이리스트를 따라가 보세요.",
+  "heroSlides": [
+    {
+      "badge": "SOUNDTRIP PICK",
+      "title": "도시의 밤을,\n음악으로 걷다",
+      "text": "가고 싶은 도시를 고르면\n그 도시의 음악 여행이 시작돼요.",
+      "image": "11_tokyomain2.jpg",
+      "link": "11_노래트송_destinations.html",
+      "linkText": "여행지 둘러보기 ›"
+    },
+    {
+      "badge": "CITY PLAYLIST",
+      "title": "부산의 새벽을\n드라이브 플레이리스트로",
+      "text": "빠르게 바뀌는 도심 풍경과\n함께 듣기 좋은 음악을 모았어요.",
+      "image": "11_한국.png",
+      "link": "11_노래트송_genre.html?city=busan",
+      "linkText": "부산 음악 여행 ›"
+    },
+    {
+      "badge": "SOUNDTRIP THEME",
+      "title": "비 오는 런던,\n천천히 걷고 싶은 오후",
+      "text": "카페와 거리 산책에 어울리는\n차분한 음악 여행을 만나보세요.",
+      "image": "11_영국 런던.jpg",
+      "link": "11_노래트송_genre.html?city=london",
+      "linkText": "런던 음악 여행 ›"
+    },
+    {
+      "badge": "SUNSET PLAYLIST",
+      "title": "리우의 노을을\n밝은 리듬과 함께",
+      "text": "바다와 선셋을 배경으로 듣는\n가볍고 활기찬 여행 음악.",
+      "image": "11_브라질 리우.jpg",
+      "link": "11_노래트송_genre.html?city=rio",
+      "linkText": "리우 음악 여행 ›"
+    }
+  ],
+  "destinations": [
+    {
+      "id": "tokyo",
+      "country": "JAPAN",
+      "city": "TOKYO",
+      "label": "일본 - 도쿄",
+      "area": "아시아",
+      "image": "11_일본.png",
+      "desc": "J-Indie, City Pop, J-Rock 등 8개 장르를 탐색합니다.",
+      "link": "11_노래트송_genre.html?city=tokyo",
+      "flight": "SD 001",
+      "code": "TYO",
+      "cityName": "도쿄"
+    },
+    {
+      "id": "busan",
+      "country": "KOREA",
+      "city": "BUSAN",
+      "label": "한국 - 부산",
+      "area": "아시아",
+      "image": "11_한국.png",
+      "desc": "바다와 도심이 함께 있는 부산의 음악 여행.",
+      "link": "11_노래트송_genre.html?city=busan",
+      "flight": "SD 002",
+      "code": "PUS",
+      "cityName": "부산"
+    },
+    {
+      "id": "london",
+      "country": "UK",
+      "city": "LONDON",
+      "label": "영국 - 런던",
+      "area": "유럽",
+      "image": "11_영국 런던.jpg",
+      "desc": "비 오는 거리와 함께 듣는 차분한 플레이리스트.",
+      "link": "11_노래트송_genre.html?city=london",
+      "flight": "SD 003",
+      "code": "LON",
+      "cityName": "런던"
+    },
+    {
+      "id": "rio",
+      "country": "BRAZIL",
+      "city": "RIO",
+      "label": "브라질 - 리우",
+      "area": "아메리카",
+      "image": "11_브라질 리우.jpg",
+      "desc": "해변과 노을에 어울리는 밝은 리듬의 음악 여행.",
+      "link": "11_노래트송_genre.html?city=rio",
+      "flight": "SD 004",
+      "code": "RIO",
+      "cityName": "리우"
+    },
+    {
+      "id": "newyork",
+      "country": "USA",
+      "city": "NEW YORK",
+      "label": "미국 - 뉴욕",
+      "area": "아메리카",
+      "image": "11_미국.png",
+      "desc": "빠른 도시의 리듬을 따라가는 뉴욕 음악 여행.",
+      "link": "11_노래트송_genre.html?city=newyork",
+      "flight": "SD 005",
+      "code": "NYC",
+      "cityName": "뉴욕"
+    },
+    {
+      "id": "paris",
+      "country": "FRANCE",
+      "city": "PARIS",
+      "label": "프랑스 - 파리",
+      "area": "유럽",
+      "image": "11_프랑스.png",
+      "desc": "산책과 카페 분위기에 어울리는 파리 음악 여행.",
+      "link": "11_노래트송_genre.html?city=paris",
+      "flight": "SD 006",
+      "code": "PAR",
+      "cityName": "파리"
+    },
+    {
+      "id": "barcelona",
+      "country": "SPAIN",
+      "city": "BARCELONA",
+      "label": "스페인 - 바르셀로나",
+      "area": "유럽",
+      "image": "11_스페인.jpg",
+      "desc": "골목 산책과 여행의 리듬을 살린 테마.",
+      "link": "11_노래트송_genre.html?city=barcelona",
+      "flight": "SD 007",
+      "code": "BCN",
+      "cityName": "바르셀로나"
+    },
+    {
+      "id": "berlin",
+      "country": "GERMANY",
+      "city": "BERLIN",
+      "label": "독일 - 베를린",
+      "area": "유럽",
+      "image": "11_독일 베를린.jpg",
+      "desc": "차가운 도시 분위기와 어울리는 야간 테마.",
+      "link": "11_노래트송_genre.html?city=berlin",
+      "flight": "SD 008",
+      "code": "BER",
+      "cityName": "베를린"
+    }
+  ],
+  "genres": [
+    {
+      "id": "j-indie",
+      "city": "tokyo",
+      "name": "J-Indie",
+      "image": "11_jindie.png",
+      "desc": "독립적인 감성과 개성 있는 사운드의 일본 인디 음악.",
+      "keywords": [
+        "감성",
+        "밴드",
+        "새벽"
+      ],
+      "likes": 1230
+    },
+    {
+      "id": "city-pop",
+      "city": "tokyo",
+      "name": "City Pop",
+      "image": "11_japancitypop.png",
+      "desc": "80년대 도시의 밤을 닮은 세련되고 부드러운 사운드.",
+      "keywords": [
+        "드라이브",
+        "레트로",
+        "야경"
+      ],
+      "likes": 980
+    },
+    {
+      "id": "j-rock",
+      "city": "tokyo",
+      "name": "J-Rock",
+      "image": "11_japanrock.png",
+      "desc": "일본 특유의 멜로디와 밴드 사운드가 만나는 록.",
+      "keywords": [
+        "밴드",
+        "에너지",
+        "라이브"
+      ],
+      "likes": 860
+    },
+    {
+      "id": "anime-ost",
+      "city": "tokyo",
+      "name": "Animation Soundtrack",
+      "image": "11_anime.png",
+      "desc": "장면과 감정을 한층 키워주는 애니메이션 음악.",
+      "keywords": [
+        "서정",
+        "감동",
+        "OST"
+      ],
+      "likes": 1120
+    },
+    {
+      "id": "idol",
+      "city": "tokyo",
+      "name": "Idol",
+      "image": "11_japanidol.png",
+      "desc": "퍼포먼스와 대중성을 앞세운 일본 대중음악.",
+      "keywords": [
+        "밝음",
+        "퍼포먼스",
+        "팝"
+      ],
+      "likes": 720
+    },
+    {
+      "id": "japan-80s",
+      "city": "tokyo",
+      "name": "Japan 80s",
+      "image": "11_japan80s.png",
+      "desc": "1980년대 일본 도시 문화가 담긴 레트로 사운드.",
+      "keywords": [
+        "레트로",
+        "신스",
+        "추억"
+      ],
+      "likes": 540
+    },
+    {
+      "id": "vocaloid",
+      "city": "tokyo",
+      "name": "Vocaloid",
+      "image": "11_vocaloid.png",
+      "desc": "가상 보컬로 창작자가 직접 만든 음악 문화.",
+      "keywords": [
+        "전자음",
+        "창작",
+        "하이텐션"
+      ],
+      "likes": 690
+    },
+    {
+      "id": "j-hiphop",
+      "city": "tokyo",
+      "name": "Japanese Hip-Hop",
+      "image": "11_japanesehiphop.png",
+      "desc": "일본어와 지역 문화가 결합된 독자적인 힙합.",
+      "keywords": [
+        "비트",
+        "랩",
+        "스트리트"
+      ],
+      "likes": 610
+    },
+    {
+      "id": "k-indie",
+      "city": "busan",
+      "name": "K-Indie",
+      "image": "11_한국.png",
+      "desc": "바다와 도시 사이에서 자란 한국 인디 음악.",
+      "keywords": [
+        "감성",
+        "바다",
+        "새벽"
+      ],
+      "likes": 640
+    },
+    {
+      "id": "k-ballad",
+      "city": "busan",
+      "name": "Ballad",
+      "image": "11_한국.png",
+      "desc": "차분한 목소리와 서정적인 멜로디의 발라드.",
+      "keywords": [
+        "서정",
+        "야경",
+        "잔잔"
+      ],
+      "likes": 580
+    },
+    {
+      "id": "seaside-pop",
+      "city": "busan",
+      "name": "Seaside Pop",
+      "image": "11_한국.png",
+      "desc": "해안 드라이브에 어울리는 밝은 팝.",
+      "keywords": [
+        "드라이브",
+        "경쾌",
+        "여름"
+      ],
+      "likes": 510
+    },
+    {
+      "id": "britpop",
+      "city": "london",
+      "name": "Britpop",
+      "image": "11_영국 런던.jpg",
+      "desc": "영국 거리의 에너지를 담은 밴드 사운드.",
+      "keywords": [
+        "밴드",
+        "에너지",
+        "클래식"
+      ],
+      "likes": 720
+    },
+    {
+      "id": "uk-indie",
+      "city": "london",
+      "name": "UK Indie",
+      "image": "11_영국 런던.jpg",
+      "desc": "비 오는 날에 어울리는 감성적인 인디 록.",
+      "keywords": [
+        "감성",
+        "비",
+        "밤"
+      ],
+      "likes": 660
+    },
+    {
+      "id": "rainy-acoustic",
+      "city": "london",
+      "name": "Rainy Acoustic",
+      "image": "11_영국 런던.jpg",
+      "desc": "카페 창가에서 듣기 좋은 어쿠스틱.",
+      "keywords": [
+        "잔잔",
+        "카페",
+        "어쿠스틱"
+      ],
+      "likes": 470
+    },
+    {
+      "id": "bossa-nova",
+      "city": "rio",
+      "name": "Bossa Nova",
+      "image": "11_브라질 리우.jpg",
+      "desc": "부드러운 기타와 속삭이는 보컬의 보사노바.",
+      "keywords": [
+        "여유",
+        "해변",
+        "기타"
+      ],
+      "likes": 590
+    },
+    {
+      "id": "samba",
+      "city": "rio",
+      "name": "Samba",
+      "image": "11_브라질 리우.jpg",
+      "desc": "축제처럼 흥겨운 리듬의 삼바.",
+      "keywords": [
+        "리듬",
+        "축제",
+        "댄스"
+      ],
+      "likes": 540
+    },
+    {
+      "id": "mpb",
+      "city": "rio",
+      "name": "MPB",
+      "image": "11_브라질 리우.jpg",
+      "desc": "브라질 대중음악의 서정과 멜로디.",
+      "keywords": [
+        "서정",
+        "노을",
+        "감성"
+      ],
+      "likes": 430
+    },
+    {
+      "id": "ny-hiphop",
+      "city": "newyork",
+      "name": "Hip-Hop",
+      "image": "11_미국.png",
+      "desc": "도시의 속도를 닮은 뉴욕 힙합.",
+      "keywords": [
+        "비트",
+        "랩",
+        "스트리트"
+      ],
+      "likes": 910
+    },
+    {
+      "id": "jazz",
+      "city": "newyork",
+      "name": "Jazz",
+      "image": "11_미국.png",
+      "desc": "밤거리의 재즈 클럽 같은 분위기.",
+      "keywords": [
+        "재즈",
+        "밤",
+        "여유"
+      ],
+      "likes": 760
+    },
+    {
+      "id": "indie-pop",
+      "city": "newyork",
+      "name": "Indie Pop",
+      "image": "11_미국.png",
+      "desc": "가볍게 걷기 좋은 인디 팝.",
+      "keywords": [
+        "산책",
+        "경쾌",
+        "감성"
+      ],
+      "likes": 620
+    },
+    {
+      "id": "chanson",
+      "city": "paris",
+      "name": "Chanson",
+      "image": "11_프랑스.png",
+      "desc": "파리 골목의 낭만을 담은 샹송.",
+      "keywords": [
+        "낭만",
+        "카페",
+        "서정"
+      ],
+      "likes": 520
+    },
+    {
+      "id": "cafe-jazz",
+      "city": "paris",
+      "name": "Cafe Jazz",
+      "image": "11_프랑스.png",
+      "desc": "아침 카페에서 듣는 부드러운 재즈.",
+      "keywords": [
+        "아침",
+        "카페",
+        "잔잔"
+      ],
+      "likes": 480
+    },
+    {
+      "id": "french-pop",
+      "city": "paris",
+      "name": "French Pop",
+      "image": "11_프랑스.png",
+      "desc": "세련된 멜로디의 프렌치 팝.",
+      "keywords": [
+        "세련",
+        "산책",
+        "팝"
+      ],
+      "likes": 450
+    },
+    {
+      "id": "spanish-guitar",
+      "city": "barcelona",
+      "name": "Spanish Guitar",
+      "image": "11_스페인.jpg",
+      "desc": "골목을 걷는 듯한 스패니시 기타.",
+      "keywords": [
+        "기타",
+        "산책",
+        "열정"
+      ],
+      "likes": 410
+    },
+    {
+      "id": "latin-pop",
+      "city": "barcelona",
+      "name": "Latin Pop",
+      "image": "11_스페인.jpg",
+      "desc": "흥겨운 리듬의 라틴 팝.",
+      "keywords": [
+        "리듬",
+        "밝음",
+        "댄스"
+      ],
+      "likes": 530
+    },
+    {
+      "id": "indie-folk",
+      "city": "barcelona",
+      "name": "Indie Folk",
+      "image": "11_스페인.jpg",
+      "desc": "잔잔한 포크와 인디의 만남.",
+      "keywords": [
+        "잔잔",
+        "감성",
+        "어쿠스틱"
+      ],
+      "likes": 360
+    },
+    {
+      "id": "techno",
+      "city": "berlin",
+      "name": "Techno",
+      "image": "11_독일 베를린.jpg",
+      "desc": "밤새 이어지는 단단한 비트.",
+      "keywords": [
+        "비트",
+        "클럽",
+        "밤"
+      ],
+      "likes": 690
+    },
+    {
+      "id": "electronic",
+      "city": "berlin",
+      "name": "Electronic",
+      "image": "11_독일 베를린.jpg",
+      "desc": "차가운 도시를 닮은 전자음악.",
+      "keywords": [
+        "전자음",
+        "야경",
+        "몽환"
+      ],
+      "likes": 560
+    },
+    {
+      "id": "indie-electronica",
+      "city": "berlin",
+      "name": "Indie Electronica",
+      "image": "11_독일 베를린.jpg",
+      "desc": "감성과 전자음이 만나는 인디 일렉트로니카.",
+      "keywords": [
+        "감성",
+        "몽환",
+        "드라이브"
+      ],
+      "likes": 420
+    }
+  ],
+  "tracks": [
+    {
+      "id": "lemon",
+      "rank": 1,
+      "title": "Lemon",
+      "artist": "Kenshi Yonezu",
+      "album": "Lemon",
+      "genre": "J-Indie",
+      "city": "Tokyo",
+      "image": "11_lemon.jpg",
+      "duration": "4:16",
+      "playLink": "11_노래트송_playing-1.html",
+      "cityId": "tokyo",
+      "playlist": "tokyo-j-indie",
+      "mood": [
+        "감성",
+        "차분함"
+      ],
+      "activity": [
+        "산책",
+        "야경"
+      ],
+      "time": [
+        "밤"
+      ],
+      "audio": "11_lemon.mp3"
+    },
+    {
+      "id": "bansanka",
+      "rank": 2,
+      "title": "晩餐歌",
+      "artist": "tuki.",
+      "album": "15",
+      "genre": "J-Indie",
+      "city": "Tokyo",
+      "image": "11_만찬가.jpg",
+      "duration": "3:35",
+      "playLink": "11_노래트송_playing-2.html",
+      "cityId": "tokyo",
+      "playlist": "tokyo-j-indie",
+      "mood": [
+        "감성"
+      ],
+      "activity": [
+        "산책",
+        "카페"
+      ],
+      "time": [
+        "밤"
+      ],
+      "audio": "11_만찬가.mp3"
+    },
+    {
+      "id": "tokyo-flash",
+      "rank": 3,
+      "title": "Tokyo Flash",
+      "artist": "Vaundy",
+      "album": "strobo",
+      "genre": "J-Indie",
+      "city": "Tokyo",
+      "image": "11_tokyoflash.png",
+      "duration": "4:18",
+      "playLink": "11_노래트송_playlist.html",
+      "cityId": "tokyo",
+      "playlist": "tokyo-j-indie",
+      "mood": [
+        "신남",
+        "설렘"
+      ],
+      "activity": [
+        "드라이브",
+        "야경"
+      ],
+      "time": [
+        "밤"
+      ]
+    },
+    {
+      "id": "meaning",
+      "rank": 4,
+      "title": "meaning",
+      "artist": "Rol3ert",
+      "album": "Meaning",
+      "genre": "J-Indie",
+      "city": "Tokyo",
+      "image": "11_meaning.png",
+      "duration": "3:44",
+      "playLink": "11_노래트송_playlist.html",
+      "cityId": "tokyo",
+      "playlist": "tokyo-j-indie",
+      "mood": [
+        "차분함",
+        "감성"
+      ],
+      "activity": [
+        "카페",
+        "산책"
+      ],
+      "time": [
+        "낮",
+        "밤"
+      ]
+    },
+    {
+      "id": "ao-to-natsu",
+      "rank": 5,
+      "title": "Ao To Natsu",
+      "artist": "Mrs. GREEN APPLE",
+      "album": "Attitude",
+      "genre": "J-Rock",
+      "city": "Tokyo",
+      "image": "11_aotonatsu.png",
+      "duration": "4:33",
+      "playLink": "11_노래트송_playlist.html",
+      "cityId": "tokyo",
+      "playlist": "tokyo-j-indie",
+      "mood": [
+        "설렘",
+        "신남"
+      ],
+      "activity": [
+        "드라이브",
+        "산책"
+      ],
+      "time": [
+        "낮",
+        "아침"
+      ]
+    },
+    {
+      "id": "sweet-and-sour",
+      "rank": 6,
+      "title": "Sweet and Sour",
+      "artist": "Nulbarich",
+      "album": "Blank Envelope",
+      "genre": "City Pop",
+      "city": "Tokyo",
+      "image": "11_sweetandsour.png",
+      "duration": "3:38",
+      "playLink": "11_노래트송_playlist.html",
+      "cityId": "tokyo",
+      "playlist": "tokyo-j-indie",
+      "mood": [
+        "설렘",
+        "차분함"
+      ],
+      "activity": [
+        "드라이브",
+        "카페"
+      ],
+      "time": [
+        "낮",
+        "밤"
+      ]
+    },
+    {
+      "id": "funny-ghost",
+      "rank": 7,
+      "title": "Funny ghost",
+      "artist": "the engy",
+      "album": "On weekdays",
+      "genre": "J-Indie",
+      "city": "Tokyo",
+      "image": "11_funnyghost.png",
+      "duration": "4:19",
+      "playLink": "11_노래트송_playlist.html",
+      "cityId": "tokyo",
+      "playlist": "tokyo-j-indie",
+      "mood": [
+        "신남",
+        "설렘"
+      ],
+      "activity": [
+        "산책",
+        "카페"
+      ],
+      "time": [
+        "낮"
+      ]
+    }
+  ],
+  "themes": [
+    {
+      "id": "tokyo-night",
+      "cityId": "tokyo",
+      "title": "도쿄, 불빛이 번지는 밤 산책",
+      "desc": "도시의 네온과 골목을 천천히 걷는 J-Indie 테마.",
+      "image": "11_tokyomain2.jpg",
+      "mood": [
+        "감성",
+        "차분함"
+      ],
+      "activity": [
+        "야경",
+        "산책"
+      ],
+      "time": [
+        "밤"
+      ],
+      "reason": "네온이 켜진 도심을 천천히 걷는 밤에 어울리는 곡 위주로 골랐어요."
+    },
+    {
+      "id": "busan-sea",
+      "cityId": "busan",
+      "title": "부산, 항구의 밤 풍경",
+      "desc": "밤바다와 항구 불빛을 따라 걷기 좋은 선곡.",
+      "image": "11_한국.png",
+      "mood": [
+        "감성",
+        "설렘"
+      ],
+      "activity": [
+        "드라이브",
+        "야경"
+      ],
+      "time": [
+        "밤"
+      ],
+      "reason": "바다와 도심 불빛이 어우러지는 밤 풍경에 맞춘 선곡이에요."
+    },
+    {
+      "id": "london-rain",
+      "cityId": "london",
+      "title": "런던, 비 갠 뒤의 저녁",
+      "desc": "조용한 거리와 낮은 조명에 어울리는 잔잔한 곡.",
+      "image": "11_영국 런던.jpg",
+      "mood": [
+        "차분함",
+        "감성"
+      ],
+      "activity": [
+        "카페",
+        "산책"
+      ],
+      "time": [
+        "낮",
+        "밤"
+      ],
+      "reason": "조용한 거리와 카페 창가에서 천천히 듣기 좋은 곡이에요."
+    },
+    {
+      "id": "rio-sunset",
+      "cityId": "rio",
+      "title": "리우, 해 질 녘 해안 도로",
+      "desc": "바다와 노을을 배경으로 듣는 밝은 리듬.",
+      "image": "11_브라질 리우.jpg",
+      "mood": [
+        "설렘",
+        "신남"
+      ],
+      "activity": [
+        "드라이브",
+        "산책"
+      ],
+      "time": [
+        "낮"
+      ],
+      "reason": "탁 트인 바다와 노을, 밝은 리듬이 어울리는 여행이에요."
+    },
+    {
+      "id": "newyork-city",
+      "cityId": "newyork",
+      "title": "뉴욕, 도시의 속도로 걷기",
+      "desc": "빠른 도시의 리듬에 맞춰 걷는 뉴욕 음악 여행.",
+      "image": "11_미국.png",
+      "mood": [
+        "신남",
+        "설렘"
+      ],
+      "activity": [
+        "산책",
+        "드라이브"
+      ],
+      "time": [
+        "낮",
+        "밤"
+      ],
+      "reason": "빠르게 바뀌는 도시 풍경과 템포가 잘 맞는 여행이에요."
+    },
+    {
+      "id": "paris-cafe",
+      "cityId": "paris",
+      "title": "파리, 카페에서 시작하는 하루",
+      "desc": "산책과 카페 분위기에 어울리는 잔잔한 선곡.",
+      "image": "11_프랑스.png",
+      "mood": [
+        "차분함",
+        "감성"
+      ],
+      "activity": [
+        "카페",
+        "산책"
+      ],
+      "time": [
+        "아침",
+        "낮"
+      ],
+      "reason": "느긋한 아침 카페와 골목 산책에 어울리는 곡이에요."
+    },
+    {
+      "id": "barcelona-walk",
+      "cityId": "barcelona",
+      "title": "바르셀로나, 골목 산책",
+      "desc": "오래 걷는 여행의 리듬을 살린 선곡.",
+      "image": "11_스페인.jpg",
+      "mood": [
+        "설렘",
+        "차분함"
+      ],
+      "activity": [
+        "산책",
+        "카페"
+      ],
+      "time": [
+        "아침",
+        "낮"
+      ],
+      "reason": "골목을 오래 걸을 때 리듬이 이어지는 곡이에요."
+    },
+    {
+      "id": "berlin-night",
+      "cityId": "berlin",
+      "title": "베를린, 긴 밤의 리듬",
+      "desc": "차가운 도시 분위기와 어울리는 야간 테마.",
+      "image": "11_독일 베를린.jpg",
+      "mood": [
+        "신남",
+        "감성"
+      ],
+      "activity": [
+        "야경",
+        "드라이브"
+      ],
+      "time": [
+        "밤"
+      ],
+      "reason": "차가운 도시의 밤과 어울리는 몽환적인 비트예요."
+    }
+  ],
+  "presets": [
+    {
+      "label": "비 오는 오후 산책",
+      "mood": [
+        "차분함"
+      ],
+      "activity": [
+        "산책"
+      ],
+      "time": [
+        "낮"
+      ]
+    },
+    {
+      "label": "새벽 드라이브",
+      "mood": [
+        "감성"
+      ],
+      "activity": [
+        "드라이브"
+      ],
+      "time": [
+        "밤"
+      ]
+    },
+    {
+      "label": "퇴근길 야경",
+      "mood": [
+        "감성"
+      ],
+      "activity": [
+        "야경"
+      ],
+      "time": [
+        "밤"
+      ]
+    }
+  ],
+  "moodOptions": [
+    "감성",
+    "설렘",
+    "차분함",
+    "신남"
+  ],
+  "activityOptions": [
+    "산책",
+    "드라이브",
+    "카페",
+    "야경"
+  ],
+  "timeOptions": [
+    "아침",
+    "낮",
+    "밤"
+  ],
+  "navMenu": [
+    {
+      "label": "홈",
+      "href": "11_노래트송_index.html",
+      "key": "home"
+    },
+    {
+      "label": "여행지",
+      "href": "11_노래트송_destinations.html",
+      "key": "dest"
+    },
+    {
+      "label": "차트",
+      "href": "11_노래트송_chart.html",
+      "key": "chart"
+    },
+    {
+      "label": "취향추천",
+      "href": "11_노래트송_recommend.html",
+      "key": "rec"
+    }
+  ],
+  "categoryMenu": [
+    {
+      "title": "여행 탐색",
+      "links": [
+        {
+          "label": "여행지",
+          "href": "11_노래트송_destinations.html"
+        }
+      ]
+    },
+    {
+      "title": "음악 탐색",
+      "links": [
+        {
+          "label": "플레이리스트",
+          "href": "11_노래트송_playlist.html"
+        },
+        {
+          "label": "차트",
+          "href": "11_노래트송_chart.html"
+        }
+      ]
+    },
+    {
+      "title": "나만의 SoundTrip",
+      "links": [
+        {
+          "label": "취향추천",
+          "href": "11_노래트송_recommend.html"
+        },
+        {
+          "label": "MY MUSIC",
+          "href": "11_노래트송_mymusic.html"
+        },
+        {
+          "label": "로그인",
+          "href": "11_노래트송_account.html"
+        }
+      ]
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "여행지",
+      "href": "11_노래트송_destinations.html",
+      "icon": "11_globe.svg"
+    },
+    {
+      "label": "음악 장르",
+      "href": "11_노래트송_genre.html",
+      "icon": "11_music.svg"
+    },
+    {
+      "label": "플레이리스트",
+      "href": "11_노래트송_playlist.html",
+      "icon": "11_playlist.svg"
+    },
+    {
+      "label": "차트",
+      "href": "11_노래트송_chart.html",
+      "icon": "11_chart.svg"
+    },
+    {
+      "label": "취향추천",
+      "href": "11_노래트송_recommend.html",
+      "icon": "11_recommend.svg"
+    },
+    {
+      "label": "MY MUSIC",
+      "href": "11_노래트송_mymusic.html",
+      "icon": "11_mymusic.svg"
+    }
+  ],
+  "steps": [
+    "출발",
+    "체크인",
+    "탑승",
+    "비행",
+    "도착"
+  ],
+  "footer": [
+    "SOUNDTRIP · 여행지를 음악으로 탐색하는 웹 애플리케이션",
+    "이용약관 | 위치기반서비스 이용약관 | 개인정보처리방침 | 청소년보호정책",
+    "(주)노래트송 서울특별시 용산구 청파로47길 100"
+  ],
+  "lyricsNotice": "저작권 보호를 위해 가사는 제공하지 않아요. 곡에 집중해서 들어보세요."
+}

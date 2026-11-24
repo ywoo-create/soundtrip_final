@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="11_노래트송_김도연(2514537) 김의린(2514088) 남현서(2516120) 조연우(2514298)">
+<meta name="description" content="SoundTrip 로그인 페이지입니다.">
+<title>SoundTrip | 로그인</title>
+
+<link rel="stylesheet" href="11_노래트송_account.css">
+<script defer src="11_노래트송_header.js"></script>
+<script defer src="11_노래트송_app.js"></script>
+</head>
+<body class="auth-page">
+<div class="top-accent"></div>
+<header class="site-header">
+  <div class="c hdr-main">
+    <a class="nol-logo" href="11_노래트송_index.html" aria-label="SoundTrip 홈"><img src="11_logo_header.png" alt="SoundTrip 로고"></a>
+    <div class="nol-search" role="search">
+      <input id="globalSearchInput" type="search" placeholder="도시, 장르, 곡을 검색해보세요" autocomplete="off">
+      <button id="globalSearchButton" type="button" aria-label="검색"><img src="11_search.svg" alt=""></button>
+    </div>
+    <nav class="account-menu" aria-label="회원 메뉴">
+      <a href="11_노래트송_account.html">로그인</a><span>|</span>
+      <a href="11_노래트송_signup.html">회원가입</a><span>|</span>
+      <a href="11_노래트송_mymusic.html">MY MUSIC</a>
+    </nav>
+  </div>
+  <div class="nav-wrap">
+    <nav class="c nol-tabs" aria-label="주요 메뉴">
+      <button type="button" class="all-menu" id="categoryButton" aria-controls="categoryMenu" aria-expanded="false">
+        <img src="11_menu.svg" alt=""><span>전체 카테고리</span>
+      </button>
+      <span class="tab-divider" aria-hidden="true"></span>
+      <a href="11_노래트송_index.html">홈</a><a href="11_노래트송_destinations.html">여행지</a><a href="11_노래트송_chart.html">차트</a><a href="11_노래트송_recommend.html">취향추천</a>
+      <div class="category-menu" id="categoryMenu" aria-label="전체 카테고리">
+        <div class="category-column">
+          <h3>여행 탐색</h3>
+          <a href="11_노래트송_destinations.html">여행지</a>
+        </div>
+        <div class="category-column">
+          <h3>음악 탐색</h3>
+          <a href="11_노래트송_playlist.html">플레이리스트</a>
+          <a href="11_노래트송_chart.html">차트</a>
+        </div>
+        <div class="category-column">
+          <h3>나만의 SoundTrip</h3>
+          <a href="11_노래트송_recommend.html">취향추천</a>
+          <a href="11_노래트송_mymusic.html">MY MUSIC</a>
+          <a href="11_노래트송_account.html">로그인</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="st-main c auth-main">
+  <section class="st-page-title-row st-auth-title">
+    <div>
+      
+      <h1>로그인하고<br>나만의 음악 여행을 이어가세요.</h1>
+    </div>
+  </section>
+  <section class="st-account-grid st-account-single">
+    <article class="st-account-card st-auth-card">
+      
+      <h2>다시 만나서 반가워요.</h2>
+      <form id="loginForm">
+        <div class="st-choice-group">
+          <label for="loginName">닉네임</label>
+          <input id="loginName" name="nickname" type="text" placeholder="회원가입 시 입력한 닉네임" autocomplete="username" required>
+        </div>
+        <div class="st-choice-group">
+          <label for="loginPassword">비밀번호</label>
+          <input id="loginPassword" name="password" type="password" placeholder="비밀번호를 입력하세요" autocomplete="current-password" required>
+        </div>
+        <button class="st-primary-button" type="submit">로그인</button>
+      </form>
+      <p class="st-auth-switch">아직 회원이 아니신가요? <a href="11_노래트송_signup.html">회원가입하기</a></p>
+    </article>
+  </section>
+</main>
+</body>
+</html>
