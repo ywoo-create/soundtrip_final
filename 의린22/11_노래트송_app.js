@@ -210,13 +210,10 @@ function renderHome() {
   showHero(0);
   document.getElementById("heroPrev").addEventListener("click", function() {
     showHero(heroIndex - 1);
-    startHeroTimer();
   });
   document.getElementById("heroNext").addEventListener("click", function() {
     showHero(heroIndex + 1);
-    startHeroTimer();
   });
-  startHeroTimer();
 
   document.getElementById("shortcutBox").innerHTML = appData.shortcuts.map(function(s) {
     return '<a href="' + s.href + '"><i><img src="' + s.icon + '" alt=""></i>' + s.label + "</a>";
@@ -228,14 +225,6 @@ function renderHome() {
   renderStamps("stampBoxHome", 3);
 }
 
-// 6초마다 다음 슬라이드로 (setTimeout을 반복해서 호출)
-function startHeroTimer() {
-  clearTimeout(heroTimer);
-  heroTimer = setTimeout(function() {
-    showHero(heroIndex + 1);
-    startHeroTimer();
-  }, 6000);
-}
 
 function showHero(index) {
   const slides = appData.heroSlides;
@@ -998,7 +987,7 @@ function renderMyMusic() {
 
   const genreBox = document.getElementById("likedGenres");
   if (likedGenres.length == 0) {
-    genreBox.innerHTML = emptyHtml("좋아요한 장르가 아직 없어요.", PAGE_GENRE, "게이트 둘러보기");
+    genreBox.innerHTML = emptyHtml("좋아요한 장르가 아직 없어요.", PAGE_GENRE, "여행지 둘러보기");
   } else {
     genreBox.innerHTML = likedGenres.map(function(id) {
       const g = findById(appData.genres, id);
