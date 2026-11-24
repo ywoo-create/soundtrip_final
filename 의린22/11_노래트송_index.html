@@ -72,12 +72,11 @@
 <div class="c">
 <form class="pass" id="passForm">
 <div class="main">
-<span id="passHint" class="sr-only"></span>
+<div class="pass-hint"><span id="passHint">도시를 고르면 탑승권이 만들어져요</span></div>
 <div class="fields">
-<div class="f"><small>FROM</small><b>서울<span>SEL</span></b></div>
 <label class="f"><small>TO</small><select id="passCity" class="empty"><option value="">도시를 선택하세요</option></select></label>
 <label class="f"><small>GATE · 장르</small><select id="passGate" class="empty" disabled><option value="">도시 선택 후</option></select></label>
-<span id="passFlight" class="sr-only">—</span>
+<div class="f last val"><small>FLIGHT</small><b id="passFlight" class="empty">—</b></div>
 </div>
 </div>
 <div class="stub"><button class="btn" id="passButton" type="submit" disabled>탑승하기</button></div>
@@ -90,7 +89,7 @@
 </section>
 <section class="sec two">
 <div>
-<div class="sh"><div><h2>이번 주 탑승 순위</h2></div><a href="11_노래트송_chart.html">차트 전체보기 ›</a></div>
+<div class="sh"><div><h2>이번 주 탑승 순위</h2><p>SoundTrip 에디터가 고른 추천 음악이에요.</p></div><a href="11_노래트송_chart.html">차트 전체보기 ›</a></div>
 <div class="rk" id="chartPreview"></div>
 </div>
 <div>
