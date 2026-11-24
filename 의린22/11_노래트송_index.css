@@ -114,9 +114,9 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .prog em { margin-left: auto; font-style: normal; color: #3b3f5c; letter-spacing: 0; font-weight: 600; }
 .fields { display: flex; }
 .f { padding: 0 22px; border-right: 1px solid #e6e9f5; display: block; }
-.f:first-child { padding-left: 0; width: 22%; }
-.f:nth-child(2) { width: 39%; }
-.f:nth-child(3) { width: 39%; border-right: 0; }
+.f:first-child { padding-left: 0; width: 50%; }
+.f:nth-child(2) { width: 50%; border-right: 0; }
+.f:nth-child(3) { width: 0; padding: 0; border: 0; }
 .f.last { border: 0; width: 0; padding: 0; }
 .f small { display: block; font-size: 10px; letter-spacing: 1.6px; color: #3b3f5c; font-weight: 800; margin-bottom: 6px; }
 .f b { display: block; font-size: 24px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; }
@@ -127,7 +127,7 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .f.val b.empty { color: #6b7090; font-size: 20px; }
 
 /* ===== 홈: 구역 ===== */
-.notice { display: flex; align-items: center; margin-top: 34px; padding: 14px 18px; font-size: 13px; color: #3b3f5c; background-color: #ffffff; border: 1px solid #e6e9f5; border-radius: 14px; }
+.notice { display: flex; align-items: center; margin-top: 34px; font-size: 13px; color: #3b3f5c; }
 .notice span { background-color: #4d5cff; color: #ffffff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: 1px; margin-right: 12px; }
 .cats { display: flex; margin-top: 44px; text-align: center; }
 .cats a { width: 16.66%; font-size: 13px; font-weight: 700; }
@@ -155,6 +155,7 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .fc .bd small { display: block; font-size: 10px; letter-spacing: 1.5px; color: #3b3f5c; font-weight: 800; margin-bottom: 3px; }
 .fc .bd b { font-size: 14px; font-weight: 800; }
 .fc .bd span { font-size: 13px; font-weight: 800; color: #4d5cff; }
+.fc .bd.home-bd { justify-content: flex-end; }
 
 /* ===== 순위 / 스탬프 ===== */
 .two { display: flex; }
@@ -452,3 +453,11 @@ h1 { font-weight: 800; letter-spacing: -1px; }
   .category-column a { padding: 4px 0; font-size: 13px; }
 }
 
+/* 탑승권의 도시 선택 안내 */
+.pass-hint {
+  margin: 0 0 18px;
+  color: #3b3f5c;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 600;
+}
