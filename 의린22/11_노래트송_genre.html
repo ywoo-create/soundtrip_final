@@ -7,7 +7,7 @@
 <meta name="description" content="SoundTrip은 여행지의 분위기와 음악을 연결해 탐색하는 음악 여행 웹 애플리케이션입니다.">
 <title>SoundTrip | 체크인</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
-<link rel="stylesheet" href="11_노래트송_genre.css">
+<link rel="stylesheet" href="11_노래트송_style.css">
 <script defer src="11_노래트송_header.js"></script>
 <script defer src="11_노래트송_app.js"></script>
 </head>
@@ -55,18 +55,21 @@
 </header>
 <main class="c page-body">
 <div class="crumb"><a href="11_노래트송_index.html">홈</a> › <a href="11_노래트송_destinations.html">여행지</a> › <b id="crumbCity">도쿄</b></div>
-<div class="ihead"><div><h1><span id="genreCityName">도쿄</span>행 체크인, 게이트를 골라주세요</h1><p>게이트는 음악 장르예요. 고르면 내 탑승권이 만들어져요.</p></div></div>
-<section class="tk">
-<div class="m"><div class="lbl">SOUNDTRIP BOARDING PASS</div>
-<div class="rt"><div class="cc"><small>FROM</small><b>SEL</b><small>SEOUL</small></div><div class="ln"><img src="11_plane.svg" alt=""></div><div class="cc" style="text-align:right"><small>TO</small><b id="tkCode">TYO</b><small id="tkCity">TOKYO</small></div></div>
-<div class="mt"><div><small>PASSENGER</small><b id="tkName">게스트</b></div><div><small>FLIGHT</small><b id="tkFlight">SD 001</b></div><div><small>GATE</small><b id="tkGate">선택 전</b></div><div><small>SEAT</small><b id="tkSeat">—</b></div></div></div>
-<div class="st"><div class="lbl">선택한 게이트</div><div class="big empty" id="tkGateBig">게이트를 선택하세요</div><button class="btn" id="tkGo" type="button" disabled>탑승하러 가기</button></div>
-</section>
-<section class="sec2" style="margin-top:56px">
-<h2 style="font-size:30px;letter-spacing:-1px;margin-top:0"><span id="gateTitleCity">도쿄</span> 게이트</h2><p style="font-size:13px;margin-top:6px;color:#3b3f5c">장르를 골라 플레이리스트로 들어가세요. 하트로 좋아하는 장르를 저장할 수 있어요.</p>
+<section class="tokyo-hero"><div><h1 id="heroCityTitle">WELCOME TO TOKYO</h1><p id="heroCityDescription">도쿄는 전통문화와 현대 대중문화가 공존하는 도시로, J-Pop, City Pop, J-Rock, Idol, Vocaloid, J-Indie 등 다양한 음악이 함께 발전해왔어요. 장르별로 도쿄를 여행해보세요.</p></div></section>
+<section class="sec2 genre-showcase" id="genreShowcase">
+<h2 style="font-size:30px;letter-spacing:-1px;margin-top:0" id="gateTitleCity">도쿄의 대표적인 음악 장르</h2><p style="font-size:13px;margin-top:6px;color:#3b3f5c">원하는 장르를 골라 도쿄의 음악을 따라가 보세요.</p>
 <div class="gg" id="genreGrid"></div>
 </section>
 </main>
 <footer class="site-footer"><div class="c" id="siteFooter"></div></footer>
+<style>
+.tokyo-hero{min-height:clamp(440px,58vw,700px);margin:28px 0 64px;padding:56px 4%;border-radius:30px;background:linear-gradient(90deg,rgba(5,10,35,.56),rgba(5,10,35,.1)),linear-gradient(0deg,rgba(5,10,35,.42),transparent 56%),url('11_tokyomain2.jpg') center 48%/cover;display:flex;align-items:flex-end;color:#fff}.tokyo-hero>div{max-width:920px}.tokyo-hero p:first-child{font-weight:800;letter-spacing:4px;animation:welcomeRise .7s both}.tokyo-hero h1{font-size:clamp(42px,5.2vw,70px);font-weight:800;line-height:1.04;letter-spacing:-1.5px;margin:12px 0 24px;animation:welcomeRise .9s .12s both}.tokyo-hero p:not(:first-child){font-size:clamp(16px,1.5vw,20px);line-height:1.8;animation:welcomeRise .8s .28s both}.tokyo-hero a{display:inline-block;margin-top:16px;padding:12px 22px;border:1px solid #fff;border-radius:30px;color:#fff;text-decoration:none;font-weight:700;animation:welcomeRise .8s .4s both}.genre-showcase{margin-top:60px}.gg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding:26px;background:#f6f7fb;border-radius:28px}.gc,.gc:nth-child(2n){position:relative;width:auto;min-width:0;margin:0;padding:0;display:flex;flex-direction:column;overflow:hidden;border:0;border-radius:22px;background:#fff;box-shadow:0 12px 32px #232d5517;isolation:isolate;cursor:pointer}.gc::before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;height:284px;background:radial-gradient(ellipse at 50% 30%,#8292b5,#282d3c 72%,#10131e)}.gc::after{content:"";position:absolute;top:26px;right:18px;width:190px;height:190px;border-radius:50%;z-index:0;background:repeating-radial-gradient(circle at center,#17191d 0 2px,#292a2c 3px 4px,#141518 5px 6px);box-shadow:0 0 26px #090a0caa}.gc.on{padding:0;border:2px solid #4d5cff}.gc>img{position:relative;z-index:1;width:64%;height:auto;aspect-ratio:1;margin:28px 0 28px 11%;border-radius:8px;object-fit:cover;box-shadow:0 10px 22px #05070b55}.gc .tx{position:relative;z-index:1;width:100%;min-height:190px;padding:18px 22px 25px;background:#fff}.gc .top2{position:absolute;z-index:3;top:14px;right:14px}.gc .top2 .ib{background:#fff;box-shadow:0 2px 12px #0003}.gc h3{margin:0 0 8px}.gc .tags{display:none}@keyframes welcomeRise{from{opacity:0;transform:translateY(22px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}@media(max-width:900px){.gg{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.gg{grid-template-columns:1fr;padding:14px}.tokyo-hero{min-height:430px;padding:26px}.tokyo-hero h1{letter-spacing:-1px}}
+/* 카드형 히어로: 얇은 프레임 안에 사진을 넣고 문구를 왼쪽 가운데 배치 */
+.tokyo-hero{position:relative;isolation:isolate;min-height:clamp(300px,32vw,460px);margin:28px 0 64px;padding:12px 5%;border:2px solid #2b2b2b;border-radius:20px;background:#171717;display:flex;align-items:center;color:#fff}
+.tokyo-hero::before{content:"";position:absolute;inset:12px;z-index:0;border-radius:13px;background:linear-gradient(90deg,rgba(5,10,35,.62),rgba(5,10,35,.08)),linear-gradient(0deg,rgba(5,10,35,.35),transparent 60%),url("11_tokyomain2.jpg") center 52%/cover}
+.tokyo-hero>div{position:relative;z-index:1;max-width:700px}
+.tokyo-hero h1{font-size:clamp(34px,4.8vw,58px)}
+@media(max-width:600px){.tokyo-hero{min-height:360px;padding:12px 5%}.tokyo-hero h1{font-size:clamp(32px,8vw,42px)}}
+</style>
 </body>
 </html>
