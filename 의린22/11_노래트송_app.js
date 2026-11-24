@@ -601,7 +601,6 @@ function renderPlayerPage() {
   document.getElementById("dockArtist").innerText = track.artist + " · " + genre.name;
   document.getElementById("stAudio").src = track.audio;
 
-  // 곡별 소개글은 1123의 곡 정보 카드에 맞춰 표시
   if (id == "lemon") {
     document.getElementById("trackStoryTitle").innerText = "도쿄의 밤을 담은 J-Indie";
     document.getElementById("trackStoryText").innerText =
@@ -612,7 +611,6 @@ function renderPlayerPage() {
       "차분한 보컬과 섬세한 멜로디가 어우러져 늦은 밤 조용히 음악을 감상하는 순간에 잘 어울리는 곡입니다.";
   }
 
-  // 같은 플레이리스트에서 이전 곡과 다음 곡을 찾음
   let index = 0;
   for (let i = 0; i < list.length; i++) {
     if (list[i].id == id) index = i;
