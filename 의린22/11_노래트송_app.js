@@ -17,7 +17,6 @@ let appData = null;      // JSON에서 불러온 데이터
 let heroIndex = 0;       // 지금 보이는 홈 슬라이드 번호
 let heroTimer = null;
 let toastTimer = null;
-let selectedGate = null; // 체크인에서 고른 장르(게이트)
 let picked = {mood: [], activity: [], time: []}; // 취향추천에서 고른 조건
 
 /* ================= 데이터 불러오기 ================= */
@@ -210,10 +209,13 @@ function renderHome() {
   showHero(0);
   document.getElementById("heroPrev").addEventListener("click", function() {
     showHero(heroIndex - 1);
+    startHeroTimer();
   });
   document.getElementById("heroNext").addEventListener("click", function() {
     showHero(heroIndex + 1);
+    startHeroTimer();
   });
+  startHeroTimer();
 
   document.getElementById("shortcutBox").innerHTML = appData.shortcuts.map(function(s) {
     return '<a href="' + s.href + '"><i><img src="' + s.icon + '" alt=""></i>' + s.label + "</a>";
@@ -225,6 +227,14 @@ function renderHome() {
   renderStamps("stampBoxHome", 3);
 }
 
+// 6초마다 다음 슬라이드로 (setTimeout을 반복해서 호출)
+function startHeroTimer() {
+  clearTimeout(heroTimer);
+  heroTimer = setTimeout(function() {
+    showHero(heroIndex + 1);
+    startHeroTimer();
+  }, 6000);
+}
 
 function showHero(index) {
   const slides = appData.heroSlides;
@@ -310,15 +320,13 @@ function renderPass() {
 
 /* --- 출발 카드 (홈, 여행지) --- */
 function renderDestinationCards(box, list) {
-    box.innerHTML = list.map(function(d) {
-        return '<a class="fc" href="' + d.link + '" data-city="' + d.id + '">' +
-            '<div class="ph"><img class="bgimg" src="' + d.image + '" alt="">' +
-            '<div class="shade"></div>' +
-            '<div class="city">' + d.city +
-            '<small>' + d.label + '</small></div></div></a>';
-    }).join("");
-
-    bindNav(box);
+  box.innerHTML = list.map(function(d) {
+    return '<a class="fc" href="' + d.link + '" data-city="' + d.id + '">' +
+      '<div class="ph"><img class="bgimg" src="' + d.image + '" alt=""><div class="shade"></div>' +
+      '<div class="city">' + d.city + "<small>" + d.label + "</small></div></div>" +
+      '</a>';
+  }).join("");
+  bindNav(box);
 }
 
 // 카드를 누르면 선택한 도시/장르를 sessionStorage에 저장하고 이동
@@ -461,30 +469,21 @@ function renderGenrePage() {
   let cityId = sessionStorage.getItem("soundtripCity");
   if (cityId == null) cityId = "tokyo";
   const d = findById(appData.destinations, cityId);
-  const profile = getProfile();
-
   document.getElementById("crumbCity").innerText = d.cityName;
-  document.getElementById("genreCityName").innerText = d.cityName;
-  document.getElementById("gateTitleCity").innerText = d.cityName;
-  document.getElementById("tkCode").innerText = d.code;
-  document.getElementById("tkCity").innerText = d.city;
-  document.getElementById("tkFlight").innerText = d.flight;
-  if (profile != null) document.getElementById("tkName").innerText = profile.nickname;
+  document.getElementById("gateTitleCity").innerText = d.cityName + "의 대표적인 음악 장르";
+  document.getElementById("heroCityTitle").innerText = "WELCOME TO " + d.city;
+  if (d.id != "tokyo") document.getElementById("heroCityDescription").innerText = d.cityName + "의 대표 장르를 따라 음악 여행을 떠나보세요.";
 
   const grid = document.getElementById("genreGrid");
   const genres = genresOf(d.id);
   grid.innerHTML = genres.map(function(g, i) {
-    const count = tracksOf(g).length;
-    let countText = "";
-    if (count > 0) countText = count + "곡";
     const keywords = g.keywords.map(function(k) { return "<span>" + k + "</span>"; }).join("");
     return '<div class="gc" data-gate="' + g.id + '">' +
       '<img src="' + g.image + '" alt="' + g.name + '">' +
-      '<div class="tx"><div class="top2"><span class="code">GATE A' + (i + 1) + "</span>" +
+      '<div class="tx"><div class="top2">' +
       '<button class="ib" type="button" data-like-genre="' + g.id + '" aria-label="장르 좋아요"><img src="11_favorite.svg" alt=""></button></div>' +
       "<h3>" + g.name + "</h3><p>" + g.desc + '</p><div class="tags">' + keywords + "</div>" +
-      '<div class="bt"><span class="lk"><img src="11_favorite.svg" alt=""><span data-like-count="' + g.id + '">' + formatLikes(genreLikeCount(g)) + "</span></span>" +
-      "<span>" + countText + "</span></div></div></div>";
+      "</div></div>";
   }).join("");
 
   const cards = grid.querySelectorAll("[data-gate]");
@@ -493,46 +492,15 @@ function renderGenrePage() {
   }
   bindActions(grid);
 
-  selectedGate = null;
-  const wanted = sessionStorage.getItem("soundtripGate");
-  if (wanted != null && findById(genres, wanted) != null) selectGate(wanted);
-
-  document.getElementById("tkGo").addEventListener("click", function() {
-    if (selectedGate == null) {
-      showToast("게이트를 먼저 선택해주세요.");
-      return;
-    }
-    sessionStorage.setItem("soundtripGenre", selectedGate.id);
-    goTo(PAGE_PLAYLIST);
-  });
 }
 function bindGateCard(card) {
-  card.addEventListener("click", function() {
-    selectGate(card.getAttribute("data-gate"));
+  card.addEventListener("click", function(event) {
+    if (event.target.closest("button")) return;
+    const genreId = card.getAttribute("data-gate");
+    sessionStorage.setItem("soundtripGate", genreId);
+    sessionStorage.setItem("soundtripGenre", genreId);
+    goTo(PAGE_PLAYLIST);
   });
-}
-function selectGate(genreId) {
-  const genre = findById(appData.genres, genreId);
-  selectedGate = genre;
-  sessionStorage.setItem("soundtripGate", genreId);
-  const cards = document.querySelectorAll("[data-gate]");
-  let index = 0;
-  for (let i = 0; i < cards.length; i++) {
-    if (cards[i].getAttribute("data-gate") == genreId) {
-      cards[i].className = "gc on";
-      index = i;
-    } else {
-      cards[i].className = "gc";
-    }
-  }
-  const count = tracksOf(genre).length;
-  document.getElementById("tkGate").innerText = "A" + (index + 1);
-  if (count > 0) document.getElementById("tkSeat").innerText = count + "석";
-  else document.getElementById("tkSeat").innerText = "—";
-  const big = document.getElementById("tkGateBig");
-  big.innerText = genre.name;
-  big.className = "big";
-  document.getElementById("tkGo").disabled = false;
 }
 
 /* --- 탑승: 플레이리스트 --- */
@@ -702,6 +670,10 @@ function renderPlayerPage() {
   addButton.setAttribute("data-add-song", id);
   bindActions(document.getElementById("stPlayerActions"));
 
+  const footerLikeButton = document.getElementById("likeTrackButton");
+  const footerAddButton = document.getElementById("addTrackButton");
+  if (footerLikeButton != null) footerLikeButton.setAttribute("data-like-song", id);
+  if (footerAddButton != null) footerAddButton.setAttribute("data-add-song", id);
   bindActions(document.getElementById("stCustomPlayer"));
 }
 
@@ -985,7 +957,7 @@ function renderMyMusic() {
 
   const genreBox = document.getElementById("likedGenres");
   if (likedGenres.length == 0) {
-    genreBox.innerHTML = emptyHtml("좋아요한 장르가 아직 없어요.", PAGE_GENRE, "여행지 둘러보기");
+    genreBox.innerHTML = emptyHtml("좋아요한 장르가 아직 없어요.", PAGE_GENRE, "게이트 둘러보기");
   } else {
     genreBox.innerHTML = likedGenres.map(function(id) {
       const g = findById(appData.genres, id);
@@ -1263,3 +1235,4 @@ function startApp() {
   loadAppData();
 }
 window.addEventListener("load", startApp);
+
