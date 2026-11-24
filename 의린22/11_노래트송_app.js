@@ -505,20 +505,22 @@ function bindGateCard(card) {
 
 /* --- 탑승: 플레이리스트 --- */
 function trackTableHtml(list, useRank) {
-  let first = "SEAT";
-  if (useRank) first = "RANK";
-  let html = '<table class="tbl"><thead><tr><th>' + first + '</th><th>TITLE</th><th class="alb">ALBUM</th><th class="tm">TIME</th><th></th></tr></thead><tbody>';
+  let html = '<table class="tbl"><thead><tr><th class="no">#</th><th>곡</th><th class="alb">앨범</th><th class="tm"><img src="11_time.svg" alt="재생 시간"></th><th class="r"></th></tr></thead><tbody>';
   for (let i = 0; i < list.length; i++) {
     const t = list[i];
-    let label = seatOf(i);
+    let label = i + 1;
     if (useRank) label = t.rank;
-    html += '<tr><td class="seat">' + label + "</td>" +
+    let play = '<a class="ib" href="' + t.playLink + '" aria-label="재생"><img src="11_play.svg" alt=""></a>';
+    if (!isPlayable(t)) play = '<a class="ib" href="#" data-unplayable="true" aria-label="재생"><img src="11_play.svg" alt=""></a>';
+    const add = '<button class="ib" type="button" data-add-song="' + t.id + '" data-icon="true" aria-label="MY MUSIC에 담기"><img src="11_add.svg" alt=""></button>';
+    html += '<tr><td class="no">' + label + "</td>" +
       '<td><div class="t"><img src="' + t.image + '" alt=""><div>' + trackLinkHtml(t, "<b>" + escapeHtml(t.title) + "</b>") + "<small>" + escapeHtml(t.artist) + "</small></div></div></td>" +
       '<td class="alb">' + escapeHtml(t.album) + '</td><td class="tm">' + t.duration + "</td>" +
-      '<td class="r"><div class="acts">' + likeButtonHtml(t.id) + addButtonHtml(t.id) + "</div></td></tr>";
+      '<td class="r"><div class="acts">' + play + likeButtonHtml(t.id) + add + "</div></td></tr>";
   }
   return html + "</tbody></table>";
 }
+  
 
 function renderPlaylistPage() {
   let genreId = sessionStorage.getItem("soundtripGenre");
@@ -527,7 +529,7 @@ function renderPlaylistPage() {
   const city = findById(appData.destinations, genre.city);
   const list = tracksOf(genre);
 
-  document.title = "SoundTrip | " + genre.name + " 탑승 명단";
+  document.title = "SoundTrip | " + genre.name + " 플레이리스트 ";
   document.getElementById("plTitle").innerText = genre.name;
   document.getElementById("crumbGenre").innerText = genre.name;
   const crumb = document.getElementById("crumbCityLink");
@@ -540,14 +542,14 @@ function renderPlaylistPage() {
   summary.innerHTML = '<img class="cv" src="' + genre.image + '" alt="' + genre.name + '">' +
     '<div><h2>' + genre.name + '</h2><p>' + genre.desc + '</p>' +
     '<div class="cs">' + keywords + "<span>" + list.length + "곡</span></div>" +
-    '<div class="acts"><button class="btn" type="button" id="playAllButton">전체 재생</button>' +
+    '<div class="acts"><button class="btn" type="button" id="playAllButton"><img src="11_play-fill-w.svg" alt="">전체 듣기</button>' +
     '<button class="btn o" type="button" data-add-playlist="' + genre.id + '"><img src="11_add.svg" alt=""><span>전체 담기</span></button>' +
-    '<button class="btn o like" type="button" data-like-genre="' + genre.id + '"><img src="11_favorite.svg" alt=""><span>장르 좋아요 <b data-like-count="' + genre.id + '">' + formatLikes(genreLikeCount(genre)) + "</b></span></button></div></div>";
+    '<button class="btn o like" type="button" data-like-genre="' + genre.id + '"><img src="11_favorite.svg" alt=""><span>좋아요 <b data-like-count="' + genre.id + '">' + formatLikes(genreLikeCount(genre)) + "</b></span></button></div></div>";
   bindActions(summary);
 
   const box = document.getElementById("plTableBox");
   if (list.length == 0) {
-    box.innerHTML = '<div class="empty-state" style="margin-top:30px"><p>아직 이 게이트의 탑승 명단에 오른 곡이 없어요.</p><a class="btn s" href="' + PAGE_GENRE + '">다른 게이트 고르기</a></div>';
+    box.innerHTML = '<div class="empty-state" style="margin-top:30px"><p>아직 플레이리스트에 담긴 곡이 없어요.</p><a class="btn s" href="' + PAGE_GENRE + '">다른 게이트 고르기</a></div>';
   } else {
     box.innerHTML = trackTableHtml(list, false);
   }
@@ -560,10 +562,9 @@ function renderPlaylistPage() {
         return;
       }
     }
-    showToast("이 게이트에는 재생할 수 있는 곡이 아직 없어요.");
+    showToast("이 플레이리스트에는 재생할 수 있는 곡이 아직 없어요.");
   });
 }
-
 /* --- 비행: 재생 페이지 (두 페이지 모두 JSON의 곡 정보로 그리기) --- */
 function renderPlayerPage() {
   const id = document.body.getAttribute("data-track-id");
