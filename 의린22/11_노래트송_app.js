@@ -873,7 +873,7 @@ function runRecommend() {
     '<div class="feat"><div class="im"><img class="bgimg" src="' + best.theme.image + '" alt=""><span>BEST MATCH</span></div>' +
     '<div class="tx"><h3>' + best.theme.title + '</h3><p>' + best.theme.desc + '</p>' +
     '<div class="why">' + why + '</div><div class="tags">' + chips + "</div>" + songHtml +
-    '<div class="acts"><a class="btn s" href="' + city.link + '" data-city="' + city.id + '">' + city.cityName + "노래 들으러 가기</a></div></div></div>";
+    '<div class="acts"><a class="btn s" href="' + city.link + '" data-city="' + city.id + '">' +"노래 들으러 가기</a></div></div></div>";
   const others = ranked.slice(1, 5);
   if (others.length > 0) {
     html += '<div class="res2">' + others.map(function(x) {
