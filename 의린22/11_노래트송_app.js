@@ -878,7 +878,7 @@ function runRecommend() {
   if (others.length > 0) {
     html += '<div class="res2">' + others.map(function(x) {
       const c = findById(appData.destinations, x.theme.cityId);
-      return '<a class="rc" href="' + c.link + '" data-city="' + c.id + '"><div class="im"><img class="bgimg" src="' + x.theme.image + '" alt=""><span>' + c.code + '</span></div><div class="tx"><b>' + x.theme.title + "</b><p>" + x.theme.desc + "</p><em>" + x.matched.join(" · ") + " 일치 ›</em></div></a>";
+      return '<a class="rc" href="' + c.link + '" data-city="' + c.id + '"><div class="im"><img class="bgimg" src="' + x.theme.image + '" alt=""></div><div class="tx"><b>' + x.theme.title + "</b><p>" + x.theme.desc + "</p></div></a>";
     }).join("") + "</div>";
   }
   box.innerHTML = html;
