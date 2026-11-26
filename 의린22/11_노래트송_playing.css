@@ -1109,9 +1109,7 @@ h1 { font-weight: 800; letter-spacing: -1px; }
   .st-account-single .st-auth-card {
     padding: 25px 20px;
   }
-  .st-breadcrumb {
-    font-size: 11px;
-  }
+  
   .st-player-stage {
     display: block;
     padding: 18px;
