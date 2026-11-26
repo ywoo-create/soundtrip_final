@@ -1,5 +1,3 @@
-/* 하단 고정 음악 재생기
-   오디오 하나를 상단 큰 재생 버튼과 하단 재생 버튼이 함께 조작합니다. */
 window.addEventListener("load", function() {
   var audio = document.getElementById("stAudio");
   var playButton = document.getElementById("stPlayPauseButton");
