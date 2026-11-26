@@ -382,7 +382,7 @@ function renderStamps(boxId, slots) {
   box.innerHTML = html;
   const message = document.getElementById("stampMessage");
   if (message != null && stamps.length > 0) {
-    message.innerHTML = stamps.length + "개 도시에 도착했어요.<br>다음 도시로 떠나볼까요?";
+    message.innerHTML = stamps.length + "개 도시를 여행했어요.<br>다음 도시로 떠나볼까요?";
   }
 }
 
@@ -415,8 +415,8 @@ function recordArrival(trackId) {
   const box = document.getElementById("arrivalBox");
   if (box != null) {
     box.style.display = "flex";
-    box.getElementsByTagName("h3")[0].innerText = city.cityName + "에 도착했어요";
-    if (isNewCity) box.getElementsByTagName("p")[0].innerText = "여권에 도착 스탬프가 찍혔어요.";
+    box.getElementsByTagName("h3")[0].innerText = city.cityName + "를 여행했어요";
+    if (isNewCity) box.getElementsByTagName("p")[0].innerText = "여권에 스탬프가 찍혔어요.";
     else box.getElementsByTagName("p")[0].innerText = "이미 스탬프가 있는 도시예요. 다른 도시도 다녀와 보세요.";
   }
   if (isNewCity) showToast("도착! 여권에 스탬프가 찍혔어요.");
@@ -879,7 +879,7 @@ function renderMyMusic() {
   if (profile != null) document.getElementById("ppName").innerText = profile.nickname;
   else document.getElementById("ppName").innerText = "게스트";
   if (stamps.length > 0) document.getElementById("ppMessage").innerText = stamps.length + "개 도시에 다녀왔어요.";
-  const stats = [["도착한 도시", stamps.length], ["비행한 곡", played.length], ["좋아요", likedGenres.length + likedSongs.length], ["담은 곡", addedPlaylists.length + addedSongs.length]];
+  const stats = [["여행한 도시", stamps.length], ["비행한 곡", played.length], ["좋아요", likedGenres.length + likedSongs.length], ["담은 곡", addedPlaylists.length + addedSongs.length]];
   document.getElementById("ppStats").innerHTML = stats.map(function(s) { return "<div><small>" + s[0] + "</small><b>" + s[1] + "</b></div>"; }).join("");
   renderStamps("stampBox", 4);
 
