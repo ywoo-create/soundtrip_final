@@ -157,6 +157,7 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .two > div:last-child { flex-grow: 1; }
 .rk { border-top: 1.5px solid #14172b; }
 .rk .r { display: flex; align-items: center; padding: 14px 0; border-bottom: 1px solid #e6e9f5; }
+.rk .r:hover { background-color: #f6f8ff; }
 .rk .n { width: 44px; font-size: 22px; font-weight: 800; color: #4d5cff; }
 .rk img.cv { width: 58px; height: 58px; border-radius: 10px; object-fit: cover; margin-right: 16px; }
 .rk .r > div { flex-grow: 1; }
