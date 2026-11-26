@@ -28,7 +28,6 @@ function loadAppData() {
     });
 }
 
-// 공지는 XMLHttpRequest로 같은 JSON에서 읽기
 function loadNotice() {
   const target = document.getElementById("noticeText");
   if (target == null) return;
@@ -43,7 +42,6 @@ function loadNotice() {
   xhr.send();
 }
 
-/* ================= 작은 도구들 ================= */
 
 function showToast(message) {
   let box = document.getElementById("toast");
@@ -61,7 +59,6 @@ function showToast(message) {
   }, 2600);
 }
 
-// 글자 속 <, >, &, " 를 안전하게 바꾸기
 function escapeHtml(text) {
   let value = text;
   if (value == null) value = "";
@@ -78,13 +75,11 @@ function escapeHtml(text) {
   return result;
 }
 
-// 저장소(localStorage / sessionStorage)에서 목록 읽기
 function getList(store, key) {
   const list = JSON.parse(store.getItem(key)) || [];
   return list;
 }
 
-// localStorage 목록에 id가 들어 있는지
 function hasItem(key, id) {
   const list = getList(localStorage, key);
   for (let i = 0; i < list.length; i++) {
@@ -93,7 +88,6 @@ function hasItem(key, id) {
   return false;
 }
 
-// 있으면 빼고 없으면 넣기. 새로 넣었으면 true
 function toggleItem(key, id) {
   const list = getList(localStorage, key);
   const next = [];
@@ -122,9 +116,14 @@ function tracksOf(genre) {
   return appData.tracks.filter(function(t) { return t.playlist == genre.city + "-" + genre.id; });
 }
 
-// 음원이 있는 곡만 바로 재생할 수 있어요
 function isPlayable(track) {
   return track.audio != undefined;
+}
+
+function seatOf(index) {
+  const row = Math.floor(index / 2) + 1;
+  if (index % 2 == 0) return row + "A";
+  return row + "B";
 }
 
 function formatLikes(n) {
@@ -146,7 +145,6 @@ function todayText() {
   return d.getFullYear() + "." + month + "." + day;
 }
 
-// 로그인 중인 회원 정보 (없으면 null)
 function getProfile() {
   if (localStorage.getItem("soundtripLoggedIn") != "true") return null;
   const saved = localStorage.getItem("soundtripProfile");
@@ -157,8 +155,6 @@ function getProfile() {
 function goTo(url) {
   window.location.href = url;
 }
-
-/* ================= 페이지 그리기 ================= */
 
 function renderPage() {
   renderHeaderAndFooter();
@@ -174,7 +170,6 @@ function renderPage() {
   refreshButtons();
 }
 
-/* --- 푸터는 JSON에서 읽고, 공용 헤더는 HTML과 header.js에서 처리 --- */
 function renderHeaderAndFooter() {
   const footer = document.getElementById("siteFooter");
   if (footer != null) {
@@ -184,7 +179,6 @@ function renderHeaderAndFooter() {
   }
 }
 
-/* --- 홈 --- */
 function renderHome() {
   heroIndex = 0;
   showHero(0);
@@ -208,7 +202,6 @@ function renderHome() {
   renderStamps("stampBoxHome", 3);
 }
 
-// 6초마다 다음 슬라이드로 (setTimeout을 반복해서 호출)
 function startHeroTimer() {
   clearTimeout(heroTimer);
   heroTimer = setTimeout(function() {
@@ -238,7 +231,6 @@ function showHero(index) {
   document.getElementById("heroDots").innerHTML = dots;
 }
 
-// 홈 탑승권: 도시 → 게이트(장르) 고르기
 function renderPass() {
   const city = document.getElementById("passCity");
   const gate = document.getElementById("passGate");
@@ -299,7 +291,6 @@ function renderPass() {
   });
 }
 
-/* --- 출발 카드 (홈, 여행지) --- */
 function renderDestinationCards(box, list) {
   box.innerHTML = list.map(function(d) {
     return '<a class="fc" href="' + d.link + '" data-city="' + d.id + '">' +
@@ -310,7 +301,6 @@ function renderDestinationCards(box, list) {
   bindNav(box);
 }
 
-// 카드를 누르면 선택한 도시/장르를 sessionStorage에 저장하고 이동
 function bindNav(root) {
   const links = root.querySelectorAll("[data-city]");
   for (let i = 0; i < links.length; i++) {
@@ -327,7 +317,7 @@ function bindNavOne(link) {
 }
 
 function renderDestinations(area) {
-  // 지역 칩은 destinations의 area 값으로 만들기
+
   const chipBox = document.getElementById("areaChips");
   if (chipBox.innerHTML == "") {
     const areas = ["전체"];
@@ -361,7 +351,7 @@ function bindAreaChip(chip) {
   });
 }
 
-/* --- 곡 목록 도구 --- */
+
 function likeButtonHtml(id) {
   return '<button class="ib" type="button" data-like-song="' + id + '" aria-label="좋아요"><img src="11_favorite.svg" alt=""></button>';
 }
@@ -384,7 +374,6 @@ function renderChartPreview() {
   bindActions(box);
 }
 
-/* --- 스탬프 --- */
 function renderStamps(boxId, slots) {
   const box = document.getElementById(boxId);
   if (box == null) return;
@@ -407,7 +396,6 @@ function renderStamps(boxId, slots) {
   }
 }
 
-// 곡을 끝까지 들으면 player.js가 호출: 들은 곡 기록 + 도시 스탬프
 function recordArrival(trackId) {
   if (appData == null) return;
   const track = findById(appData.tracks, trackId);
@@ -445,7 +433,6 @@ function recordArrival(trackId) {
   else showToast("도착했어요.");
 }
 
-/* --- 체크인: 장르 = 게이트 --- */
 function renderGenrePage() {
   let cityId = sessionStorage.getItem("soundtripCity");
   if (cityId == null) cityId = "tokyo";
@@ -484,7 +471,6 @@ function bindGateCard(card) {
   });
 }
 
-/* --- 탑승: 플레이리스트 --- */
 function trackTableHtml(list, useRank) {
   let html = '<table class="tbl"><thead><tr><th class="no">#</th><th>곡</th><th class="alb">앨범</th><th class="tm"><img src="11_time.svg" alt="재생 시간"></th><th class="r"></th></tr></thead><tbody>';
   for (let i = 0; i < list.length; i++) {
@@ -546,7 +532,7 @@ function renderPlaylistPage() {
     showToast("이 플레이리스트에는 재생할 수 있는 곡이 아직 없어요.");
   });
 }
-/* --- 비행: 재생 페이지 (두 페이지 모두 JSON의 곡 정보로 그리기) --- */
+
 function renderPlayerPage() {
   const id = document.body.getAttribute("data-track-id");
   const track = findById(appData.tracks, id);
@@ -568,6 +554,7 @@ function renderPlayerPage() {
   document.title = "SoundTrip | " + displayTitle;
   document.getElementById("trackTitle").innerText = displayTitle;
   document.getElementById("trackArtist").innerText = track.artist;
+  const description = document.getElementById("trackDescription");
 
   document.getElementById("trackCover").src = track.image;
   document.getElementById("dockCover").src = track.image;
@@ -622,7 +609,6 @@ function renderPlayerPage() {
     nextButton.disabled = true;
   }
 
-  // 1123 화면처럼 다음 곡 커버와 제목을 표시
   let cardTrack = next;
   if (cardTrack == null && list.length > 1) cardTrack = list[0];
   const card = document.getElementById("nextCard");
@@ -638,7 +624,6 @@ function renderPlayerPage() {
       '<a href="' + PAGE_PLAYLIST + '" class="st-next-track-button"><strong>플레이리스트 보기</strong></a>';
   }
 
-  // MY MUSIC 담기 버튼을 현재 곡과 연결
   const addButton = document.getElementById("addCurrentTrackButton");
   addButton.setAttribute("data-add-song", id);
   bindActions(document.getElementById("stPlayerActions"));
@@ -650,7 +635,6 @@ function renderPlayerPage() {
   bindActions(document.getElementById("stCustomPlayer"));
 }
 
-/* --- 차트 --- */
 function renderChartPage() {
   const tabs = document.getElementById("chartTabs");
   const genres = ["전체"];
@@ -705,7 +689,6 @@ function renderChart(genre) {
   refreshButtons();
 }
 
-/* --- 취향추천: 고른 조건과 태그가 맞는 만큼 점수를 줘서 고르기 --- */
 function renderRecommendPage() {
   const groups = [["moodOpts", "mood", "moodOptions"], ["activityOpts", "activity", "activityOptions"], ["timeOpts", "time", "timeOptions"]];
   for (let g = 0; g < groups.length; g++) {
@@ -720,7 +703,6 @@ function renderRecommendPage() {
   }
   document.getElementById("recommendButton").addEventListener("click", runRecommend);
 
-  // 이번 방문(sessionStorage)에 고른 조건이 있으면 다시 채워두기
   const saved = JSON.parse(sessionStorage.getItem("soundtripPicked"));
   if (saved != null) applyPicked(saved);
   renderRecentConds();
@@ -784,14 +766,14 @@ function matchList(a, b) {
   }
   return result;
 }
-// 맞는 조건 개수로 점수 계산 (기분, 상황은 2점, 시간대는 1점)
+
 function scoreItem(item) {
   const m = matchList(picked.mood, item.mood);
   const a = matchList(picked.activity, item.activity);
   const t = matchList(picked.time, item.time);
   return {score: m.length * 2 + a.length * 2 + t.length, matched: m.concat(a, t)};
 }
-// 점수가 높은 순으로 정렬 (같으면 원래 순서 유지)
+
 function sortByScore(list) {
   for (let i = 0; i < list.length; i++) {
     for (let j = i + 1; j < list.length; j++) {
@@ -838,8 +820,6 @@ function runRecommend() {
   }
   songs = sortByScore(songs).slice(0, 3);
 
-  const chips = best.matched.map(function(m) { return "<span>" + m + "</span>"; }).join("");
-  const why = "<b>" + best.matched.join(" · ") + "</b> 조건이 이 여행과 맞아요. " + best.theme.reason;
   let songHtml = "";
   if (songs.length > 0) {
     songHtml = '<div class="mini">' + songs.map(function(s) {
@@ -852,7 +832,7 @@ function runRecommend() {
   let html = '<div class="sumline"><h2><em>' + escapeHtml(label) + '</em> 조건으로 골랐어요</h2><button type="button" id="resetRecommend">조건 초기화</button></div>' +
     '<div class="feat"><div class="im"><img class="bgimg" src="' + best.theme.image + '" alt=""><span>BEST MATCH</span></div>' +
     '<div class="tx"><h3>' + best.theme.title + '</h3><p>' + best.theme.desc + '</p>' +
-    '<div class="why">' + why + '</div><div class="tags">' + chips + "</div>" + songHtml +
+    songHtml +
     '<div class="acts"><a class="btn s" href="' + city.link + '" data-city="' + city.id + '">' +"노래 들으러 가기</a></div></div></div>";
   const others = ranked.slice(1, 5);
   if (others.length > 0) {
@@ -868,7 +848,7 @@ function runRecommend() {
     showRecommendIntro();
   });
 }
-// 최근에 고른 조건 3개는 localStorage에 저장
+
 function saveRecentCond() {
   const now = {mood: picked.mood, activity: picked.activity, time: picked.time};
   const text = JSON.stringify(now);
@@ -898,7 +878,6 @@ function bindRecent(button) {
   });
 }
 
-/* --- MY MUSIC --- */
 function songRowHtml(t, button) {
   return '<div class="lrow"><img src="' + t.image + '" alt=""><div>' + trackLinkHtml(t, "<b>" + escapeHtml(t.title) + "</b>") + "<small>" + escapeHtml(t.artist) + '</small></div><div class="acts">' + button + "</div></div>";
 }
@@ -972,9 +951,6 @@ function renderMyMusic() {
   bindNav(plBox);
 }
 
-/* ================= 좋아요 · 담기 버튼 ================= */
-
-// root 안의 버튼들에 클릭 이벤트를 하나씩 연결 (화면을 새로 그릴 때마다 호출)
 function bindActions(root) {
   let list = root.querySelectorAll("[data-like-song]");
   for (let i = 0; i < list.length; i++) bindLikeSong(list[i]);
@@ -1000,7 +976,7 @@ function bindLikeSong(button) {
 function bindLikeGenre(button) {
   button.addEventListener("click", function(event) {
     event.preventDefault();
-    event.stopPropagation(); // 장르 카드 선택 이벤트로 번지지 않게
+    event.stopPropagation(); 
     const on = toggleItem("soundtripLikedGenres", button.getAttribute("data-like-genre"));
     afterToggle();
     if (on) showToast("좋아요한 장르에 저장했어요.");
@@ -1037,7 +1013,6 @@ function afterToggle() {
   refreshButtons();
 }
 
-// 저장된 좋아요/담기 상태에 맞게 모든 버튼 모양 바꾸기
 function refreshButtons() {
   let nodes = document.querySelectorAll("[data-like-song]");
   for (let i = 0; i < nodes.length; i++) {
@@ -1083,7 +1058,6 @@ function setAddLook(button, on, offText, onText) {
   }
 }
 
-/* ================= 검색 ================= */
 function performSearch() {
   const input = document.getElementById("globalSearchInput");
   if (appData == null) return;
@@ -1121,7 +1095,6 @@ function performSearch() {
   showToast("검색 결과가 없어요. 도시, 장르, 곡 이름으로 검색해보세요.");
 }
 
-/* ================= 회원가입 / 로그인 ================= */
 
 function renderAccountPage() {
   const loginForm = document.getElementById("loginForm");
@@ -1181,6 +1154,14 @@ function logIn(event) {
   alert(profile.nickname + "님, 환영합니다.");
   window.location.href = "11_노래트송_index.html";
 }
+
+function logout() {
+  localStorage.removeItem("soundtripLoggedIn");
+  sessionStorage.removeItem("soundtripLoggedIn");
+  alert("로그아웃되었습니다.");
+  window.location.href = "11_노래트송_index.html";
+}
+window.logoutProfile = logout;
 
 function startApp() {
   const searchButton = document.getElementById("globalSearchButton");
