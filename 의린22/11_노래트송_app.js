@@ -1,27 +1,15 @@
-/* SoundTrip 공통 스크립트 (수업 범위의 문법만 사용)
-   흐름: 출발(여행지) → 체크인(장르 = 게이트) → 탑승(플레이리스트) → 비행(재생) → 도착(MY MUSIC 스탬프)
-
-   - fetch + JSON     : 여행지, 장르, 곡, 메뉴, 추천 데이터 (11_노래트송_data.json)
-   - XMLHttpRequest   : 홈 공지 (#noticeText)
-   - sessionStorage   : 이번 방문(탭)에서만 쓰는 값 → 선택한 도시/게이트/장르, 로그인 상태, 고른 추천 조건
-   - localStorage     : 계속 남겨두는 값 → 회원 정보, 좋아요, 담기, 스탬프, 들은 곡, 최근 추천 조건
-   - addEventListener : 모든 클릭/입력 이벤트
-*/
 const DATA_FILE = "11_노래트송_data.json";
 const PAGE_GENRE = "11_노래트송_genre.html";
 const PAGE_PLAYLIST = "11_노래트송_playlist.html";
 const PAGE_MYMUSIC = "11_노래트송_mymusic.html";
 const PAGE_ACCOUNT = "11_노래트송_account.html";
 
-let appData = null;      // JSON에서 불러온 데이터
-let heroIndex = 0;       // 지금 보이는 홈 슬라이드 번호
+let appData = null;
+let heroIndex = 0;
 let heroTimer = null;
 let toastTimer = null;
-let picked = {mood: [], activity: [], time: []}; // 취향추천에서 고른 조건
+let picked = {mood: [], activity: [], time: []};
 
-/* ================= 데이터 불러오기 ================= */
-
-// fetch로 JSON 불러오기
 function loadAppData() {
   fetch(DATA_FILE)
     .then(function(response) {
