@@ -568,7 +568,6 @@ function renderPlayerPage() {
   document.title = "SoundTrip | " + displayTitle;
   document.getElementById("trackTitle").innerText = displayTitle;
   document.getElementById("trackArtist").innerText = track.artist;
-  const description = document.getElementById("trackDescription");
 
   document.getElementById("trackCover").src = track.image;
   document.getElementById("dockCover").src = track.image;
