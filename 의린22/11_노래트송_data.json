@@ -2,7 +2,6 @@
   "notice": "도쿄 음악 여행이 열렸어요. 여행지를 고르고 장르와 플레이리스트를 따라가 보세요.",
   "heroSlides": [
     {
-      "badge": "SOUNDTRIP PICK",
       "title": "도시의 밤을,\n음악으로 걷다",
       "text": "가고 싶은 도시를 고르면\n그 도시의 음악 여행이 시작돼요.",
       "image": "11_tokyomain2.jpg",
@@ -10,7 +9,6 @@
       "linkText": "여행지 둘러보기 >"
     },
     {
-      "badge": "CITY PLAYLIST",
       "title": "부산의 새벽을\n드라이브 플레이리스트로",
       "text": "빠르게 바뀌는 도심 풍경과\n함께 듣기 좋은 음악을 모았어요.",
       "image": "11_한국.png",
@@ -18,7 +16,6 @@
       "linkText": "부산 음악 여행 >"
     },
     {
-      "badge": "SOUNDTRIP THEME",
       "title": "비 오는 런던,\n천천히 걷고 싶은 오후",
       "text": "카페와 거리 산책에 어울리는\n차분한 음악 여행을 만나보세요.",
       "image": "11_영국 런던.png",
@@ -26,7 +23,6 @@
       "linkText": "런던 음악 여행 >"
     },
     {
-      "badge": "SUNSET PLAYLIST",
       "title": "리우의 노을을\n밝은 리듬과 함께",
       "text": "바다와 선셋을 배경으로 듣는\n가볍고 활기찬 여행 음악.",
       "image": "11_브라질 리우.png",
