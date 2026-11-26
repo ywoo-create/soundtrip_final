@@ -2,7 +2,6 @@ const DATA_FILE = "11_노래트송_data.json";
 const PAGE_GENRE = "11_노래트송_genre.html";
 const PAGE_PLAYLIST = "11_노래트송_playlist.html";
 const PAGE_MYMUSIC = "11_노래트송_mymusic.html";
-const PAGE_ACCOUNT = "11_노래트송_account.html";
 
 let appData = null;
 let heroIndex = 0;
@@ -118,12 +117,6 @@ function tracksOf(genre) {
 
 function isPlayable(track) {
   return track.audio != undefined;
-}
-
-function seatOf(index) {
-  const row = Math.floor(index / 2) + 1;
-  if (index % 2 == 0) return row + "A";
-  return row + "B";
 }
 
 function formatLikes(n) {
@@ -551,7 +544,6 @@ function renderPlayerPage() {
   document.title = "SoundTrip | " + displayTitle;
   document.getElementById("trackTitle").innerText = displayTitle;
   document.getElementById("trackArtist").innerText = track.artist;
-  const description = document.getElementById("trackDescription");
 
   document.getElementById("trackCover").src = track.image;
   document.getElementById("dockCover").src = track.image;
