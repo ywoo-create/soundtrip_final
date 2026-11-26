@@ -7,7 +7,7 @@
       "text": "가고 싶은 도시를 고르면\n그 도시의 음악 여행이 시작돼요.",
       "image": "11_tokyomain2.jpg",
       "link": "11_노래트송_destinations.html",
-      "linkText": "여행지 둘러보기 ›"
+      "linkText": "여행지 둘러보기 >"
     },
     {
       "badge": "CITY PLAYLIST",
@@ -15,7 +15,7 @@
       "text": "빠르게 바뀌는 도심 풍경과\n함께 듣기 좋은 음악을 모았어요.",
       "image": "11_한국.png",
       "link": "11_노래트송_genre.html?city=busan",
-      "linkText": "부산 음악 여행 ›"
+      "linkText": "부산 음악 여행 >"
     },
     {
       "badge": "SOUNDTRIP THEME",
@@ -23,7 +23,7 @@
       "text": "카페와 거리 산책에 어울리는\n차분한 음악 여행을 만나보세요.",
       "image": "11_영국 런던.png",
       "link": "11_노래트송_genre.html?city=london",
-      "linkText": "런던 음악 여행 ›"
+      "linkText": "런던 음악 여행 >"
     },
     {
       "badge": "SUNSET PLAYLIST",
@@ -31,7 +31,7 @@
       "text": "바다와 선셋을 배경으로 듣는\n가볍고 활기찬 여행 음악.",
       "image": "11_브라질 리우.png",
       "link": "11_노래트송_genre.html?city=rio",
-      "linkText": "리우 음악 여행 ›"
+      "linkText": "리우 음악 여행 >"
     }
   ],
   "destinations": [
