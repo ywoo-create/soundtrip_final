@@ -1,5 +1,3 @@
-/* SoundTrip 공용 헤더
-   전체 카테고리 열기/닫기와 로그인 회원 메뉴 표시 */
 function updateSoundTripHeaderAccount() {
   var accountMenu = document.querySelector(".account-menu");
   if (accountMenu == null) return;
