@@ -355,9 +355,6 @@ function bindAreaChip(chip) {
 function likeButtonHtml(id) {
   return '<button class="ib" type="button" data-like-song="' + id + '" aria-label="좋아요"><img src="11_favorite.svg" alt=""></button>';
 }
-function addButtonHtml(id) {
-  return '<button class="pill" type="button" data-add-song="' + id + '"><img src="11_add.svg" alt=""><span>담기</span></button>';
-}
 function trackLinkHtml(t, inner) {
   if (isPlayable(t)) return '<a href="' + t.playLink + '">' + inner + "</a>";
   return '<a href="#" data-unplayable="true">' + inner + "</a>";
