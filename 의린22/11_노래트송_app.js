@@ -127,13 +127,6 @@ function isPlayable(track) {
   return track.audio != undefined;
 }
 
-// 좌석 번호: 1A, 1B, 2A, 2B ...
-function seatOf(index) {
-  const row = Math.floor(index / 2) + 1;
-  if (index % 2 == 0) return row + "A";
-  return row + "B";
-}
-
 function formatLikes(n) {
   if (n >= 1000) return (Math.floor(n / 100) / 10) + "천";
   return String(n);
@@ -1190,15 +1183,6 @@ function logIn(event) {
   window.location.href = "11_노래트송_index.html";
 }
 
-function logout() {
-  localStorage.removeItem("soundtripLoggedIn");
-  sessionStorage.removeItem("soundtripLoggedIn");
-  alert("로그아웃되었습니다.");
-  window.location.href = "11_노래트송_index.html";
-}
-window.logoutProfile = logout;
-
-/* ================= 시작 ================= */
 function startApp() {
   const searchButton = document.getElementById("globalSearchButton");
   const searchInput = document.getElementById("globalSearchInput");
