@@ -439,29 +439,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
   max-width: 92%;
   margin: 0 auto;
 }
-.st-breadcrumb {
-  display: flex;
-  align-items: center;
-  margin: 22px 0 20px;
-  color: #9293a0;
-  font-size: 13px;
-}
-.st-breadcrumb a {
-  padding: 4px 7px;
-  border-radius: 7px;
-  color: #6f7180;
-}
-.st-breadcrumb a:hover {
-  background-color: #f1f2f6;
-  color: #4d5cff;
-}
-.st-breadcrumb span {
-  margin: 0 6px;
-}
-.st-breadcrumb a:last-child {
-  color: #4d5cff;
-  font-weight: 700;
-}
 
 .auth-main {
   padding-bottom: 48px;
