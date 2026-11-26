@@ -1,7 +1,3 @@
-/* ===== 11_노래트송_style.css 내용 ===== */
-/* SoundTrip 공통 스타일 (수업 범위: 선택자, 박스 모델, position, display:flex, 미디어 쿼리)
-   색상: 글자 #14172b / 포인트 파랑 #4d5cff / 연한 하늘 #eef2ff, #f6f8ff / 선 #e6e9f5 / 보조 글자 #3b3f5c */
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: "Noto Sans KR", "Noto Sans CJK KR", sans-serif; color: #14172b; background: #ffffff; line-height: 1.5; }
 a { color: #14172b; text-decoration: none; }
@@ -13,7 +9,6 @@ input, select { font-family: inherit; }
 .bgimg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .shade { position: absolute; left: 0; right: 0; bottom: 0; height: 60%; background-color: #0a0e28; opacity: 0.45; }
 
-/* ===== 헤더: 현서버전2 원래 배치 ===== */
 .top-accent { height: 3px; background-color: #4d5cff; }
 .hdr-main { display: flex; align-items: center; padding: 18px 0 14px; }
 .nol-logo img { height: 26px; width: auto; }
@@ -43,7 +38,6 @@ input, select { font-family: inherit; }
 .category-column a { display: block; font-size: 14px; font-weight: 500; line-height: 1.5; padding: 6px 0; color: #626371; }
 .category-column a:hover { color: #4d5cff; }
 
-/* ===== 공통 요소 ===== */
 h1 { font-weight: 800; letter-spacing: -1px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; padding: 15px 28px; border-radius: 999px; background-color: #4d5cff; color: #ffffff; font-weight: 800; font-size: 15px; white-space: nowrap; }
 .btn:hover { background-color: #3f4de8; }
@@ -68,7 +62,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .acts { display: flex; align-items: center; margin-top: 22px; flex-wrap: wrap; }
 .acts .btn, .acts .pill, .acts .ib { margin-right: 10px; margin-left: 0; }
 
-/* ===== 진행 표시 ===== */
 .crumb { font-size: 12px; color: #3b3f5c; padding-top: 22px; font-weight: 600; }
 .crumb a:hover { color: #4d5cff; }
 .crumb b { color: #14172b; }
@@ -85,7 +78,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .prog2 s.done { border-top: 2px solid #4d5cff; }
 .page-body { padding-bottom: 90px; }
 
-/* ===== 홈: 히어로 ===== */
 .hero { position: relative; height: 580px; color: #ffffff; background-color: #0b1030; overflow: hidden; }
 .hero-shade { position: absolute; left: 0; top: 0; width: 70%; height: 100%; background-color: #090c28; opacity: 0.5; }
 .hero-in { position: relative; height: 100%; }
@@ -101,7 +93,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .hero-ctl .ar:hover { background-color: #7a85ff; }
 .hero-ctl .ar img { width: 16px; }
 
-/* ===== 홈: 탑승권 ===== */
 .pass { position: relative; margin-top: -84px; z-index: 5; background-color: #ffffff; border-radius: 22px; border: 1px solid #dde3f8; display: flex; }
 .pass .main { flex-grow: 1; padding: 22px 34px 26px 34px; }
 .pass .stub { width: 220px; border-left: 2px dashed #c5cef5; background-color: #f6f8ff; border-radius: 0 22px 22px 0; display: flex; align-items: center; justify-content: center; }
@@ -126,7 +117,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .f select.empty { color: #6b7090; }
 .f.val b.empty { color: #6b7090; font-size: 20px; }
 
-/* ===== 홈: 구역 ===== */
 .notice { display: flex; align-items: center; margin-top: 34px; font-size: 13px; color: #3b3f5c; }
 .notice span { background-color: #4d5cff; color: #ffffff; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 999px; letter-spacing: 1px; margin-right: 12px; }
 .cats { display: flex; margin-top: 44px; text-align: center; }
@@ -142,7 +132,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .sh > a { font-size: 13px; color: #3b3f5c; font-weight: 600; white-space: nowrap; }
 .sh > a:hover { color: #4d5cff; }
 
-/* ===== 출발 카드 ===== */
 .flights { display: flex; flex-wrap: wrap; }
 .fc { display: block; width: 23.5%; margin: 0 2% 26px 0; background-color: #ffffff; border-radius: 20px; border: 1px solid #e6e9f5; overflow: hidden; }
 .fc:nth-child(4n) { margin-right: 0; }
@@ -156,7 +145,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .fc .bd b { font-size: 14px; font-weight: 800; }
 .fc .bd span { font-size: 13px; font-weight: 800; color: #4d5cff; }
 
-/* ===== 순위 / 스탬프 ===== */
 .two { display: flex; }
 .two > div:first-child { width: 55%; margin-right: 56px; }
 .two > div:last-child { flex-grow: 1; }
@@ -181,7 +169,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .moods { display: flex; }
 .moods span { padding: 13px 22px; margin-left: 12px; border-radius: 999px; background-color: #6f7cff; border: 1px solid #ffffff; font-weight: 700; font-size: 14px; }
 
-/* ===== 표 ===== */
 .tbl { width: 100%; border-collapse: collapse; margin-top: 30px; }
 .tbl th { font-size: 11px; letter-spacing: 1.6px; color: #3b3f5c; text-align: left; padding: 10px 12px; border-bottom: 1.5px solid #14172b; font-weight: 800; }
 .tbl td { padding: 12px; border-bottom: 1.5px dashed #e6e9f5; font-size: 14px; vertical-align: middle; }
@@ -196,7 +183,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .tbl .acts .pill { margin-right: 0; }
 .tbl .r { text-align: right; }
 
-/* ===== 체크인 ===== */
 .tk { display: flex; background-color: #ffffff; border: 1px solid #dde3f8; border-radius: 24px; margin-top: 34px; }
 .tk .m { flex-grow: 1; padding: 30px 40px; }
 .tk .st { width: 300px; background-color: #f6f8ff; border-left: 2px dashed #c5cef5; border-radius: 0 24px 24px 0; padding: 30px; display: flex; flex-direction: column; justify-content: center; }
@@ -230,7 +216,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .lk { display: flex; align-items: center; font-weight: 700; font-size: 12.5px; color: #14172b; }
 .lk img { width: 17px; margin-right: 6px; }
 
-/* ===== 플레이리스트 ===== */
 .sum { display: flex; align-items: center; background-color: #eef2ff; border-radius: 28px; padding: 36px 44px; margin-top: 34px; }
 .sum img.cv { width: 180px; height: 180px; border-radius: 16px; object-fit: cover; margin-right: 34px; }
 .sum h2 { font-size: 36px; font-weight: 800; letter-spacing: -1px; margin: 0 0 8px 0; }
@@ -239,7 +224,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .cs span { background-color: #ffffff; border: 1px solid #cdd5f7; color: #4d5cff; font-size: 11px; font-weight: 800; letter-spacing: 1px; padding: 6px 13px; margin-right: 8px; border-radius: 999px; }
 .btn.like.liked { border-color: #f5c2c2; background-color: #fff5f5; }
 
-/* ===== 비행(재생) ===== */
 .sky { background-color: #eef2ff; border-radius: 30px; padding: 46px 56px 36px 56px; margin-top: 34px; }
 .fl { display: flex; align-items: center; }
 .win { width: 330px; height: 330px; border-radius: 40px; background-color: #ffffff; padding: 14px; margin-right: 56px; }
@@ -285,7 +269,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .card p { font-size: 14px; color: #3b3f5c; line-height: 1.8; }
 .card .btn { margin-top: 14px; }
 
-/* ===== 차트 ===== */
 .top3 { display: flex; }
 .tc { width: 32%; margin-right: 2%; height: 290px; border-radius: 24px; overflow: hidden; position: relative; color: #ffffff; background-color: #14172b; }
 .tc:nth-child(3n) { margin-right: 0; }
@@ -296,7 +279,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .tc .tx small { font-size: 13px; }
 .tc .ib { position: absolute; right: 18px; top: 18px; z-index: 3; background-color: #ffffff; }
 
-/* ===== 취향추천 ===== */
 .rwrap { display: flex; align-items: flex-start; margin-top: 34px; }
 .cond { width: 340px; margin-right: 36px; border: 1px solid #dde3f8; border-radius: 24px; padding: 28px; }
 #recommendResult { flex-grow: 1; width: 1px; }
@@ -337,7 +319,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .rc .tx em { display: block; margin-top: 12px; font-style: normal; font-size: 13px; font-weight: 800; color: #4d5cff; }
 .suggest { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 16px; }
 
-/* ===== MY MUSIC ===== */
 .pp { display: flex; border-radius: 26px; overflow: hidden; border: 1px solid #dde3f8; margin-top: 34px; }
 .pp .cover { width: 300px; background-color: #4d5cff; color: #ffffff; padding: 32px; }
 .pp .cover small { font-size: 10px; letter-spacing: 2.4px; font-weight: 800; }
@@ -378,7 +359,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .plc small { font-size: 12.5px; color: #3b3f5c; }
 .plc .acts { margin: 0; }
 
-/* ===== 로그인 / 가입 ===== */
 .acc { display: flex; border-radius: 28px; overflow: hidden; border: 1px solid #e6e9f5; margin-top: 34px; }
 .acc .l { width: 50%; min-height: 560px; position: relative; color: #ffffff; }
 .acc .l .tx { position: absolute; left: 44px; right: 44px; bottom: 44px; z-index: 2; }
@@ -394,12 +374,10 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .welcome h2 { font-size: 26px; font-weight: 800; letter-spacing: -1px; margin: 8px 0 10px 0; }
 .welcome p { color: #3b3f5c; font-size: 14px; line-height: 1.7; }
 
-/* ===== 안내 메시지 / 푸터 ===== */
 .toast { position: fixed; left: 50%; bottom: 36px; width: 360px; margin-left: -180px; text-align: center; background-color: #14172b; color: #ffffff; padding: 14px 24px; border-radius: 999px; font-size: 14px; font-weight: 600; z-index: 200; display: none; }
 .site-footer { border-top: 1px solid #e6e9f5; padding: 30px 0 56px 0; font-size: 12px; color: #3b3f5c; line-height: 1.9; }
 .site-footer strong { color: #14172b; font-size: 15px; }
 
-/* ===== 작은 화면 (미디어 쿼리) ===== */
 @media (max-width: 960px) {
   .nol-search { width: auto; flex-grow: 1; }
   .account-menu { display: none; }
@@ -428,10 +406,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
   .tc { margin-bottom: 14px; }
 }
 
-
-
-
-/* ===== 헤더 반응형 정리 ===== */
 @media (max-width: 960px) {
   .nol-tabs { overflow: visible; }
   .category-menu { padding: 20px 18px; }
@@ -452,7 +426,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
   .category-column a { padding: 4px 0; font-size: 13px; }
 }
 
-/* 탑승권의 도시 선택 안내 */
 .pass-hint {
   margin: 0 0 18px;
   color: #3b3f5c;
