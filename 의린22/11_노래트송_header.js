@@ -45,7 +45,6 @@ function updateSoundTripHeaderAccount() {
     myMusic.innerText = "MY MUSIC";
     accountMenu.appendChild(myMusic);
 
-    // 로그인 상태에서는 전체 카테고리의 로그인 링크를 숨김
     var categoryMenu = document.getElementById("categoryMenu");
     if (categoryMenu != null) {
       var categoryLinks = categoryMenu.getElementsByTagName("a");
