@@ -878,7 +878,6 @@ function renderMyMusic() {
 
   if (profile != null) document.getElementById("ppName").innerText = profile.nickname;
   else document.getElementById("ppName").innerText = "게스트";
-  if (stamps.length > 0) document.getElementById("ppMessage").innerText = stamps.length + "개 도시에 다녀왔어요.";
   const stats = [["여행한 도시", stamps.length], ["비행한 곡", played.length], ["좋아요", likedGenres.length + likedSongs.length], ["담은 곡", addedPlaylists.length + addedSongs.length]];
   document.getElementById("ppStats").innerHTML = stats.map(function(s) { return "<div><small>" + s[0] + "</small><b>" + s[1] + "</b></div>"; }).join("");
   renderStamps("stampBox", 4);
@@ -1122,7 +1121,7 @@ function logIn(event) {
   const nickname = document.getElementById("loginName").value;
   const password = document.getElementById("loginPassword").value;
 
-  if (profile.password == undefined) {
+  .password == undefined) {
     showToast("기존 회원 정보에 비밀번호가 없습니다. 다시 회원가입해주세요.");
     return;
   }
