@@ -1121,7 +1121,7 @@ function logIn(event) {
   const nickname = document.getElementById("loginName").value;
   const password = document.getElementById("loginPassword").value;
 
-  .password == undefined) {
+  if (profile.password == undefined) {
     showToast("기존 회원 정보에 비밀번호가 없습니다. 다시 회원가입해주세요.");
     return;
   }
@@ -1162,4 +1162,3 @@ function startApp() {
   loadAppData();
 }
 window.addEventListener("load", startApp);
-
