@@ -5,7 +5,6 @@ const PAGE_MYMUSIC = "11_노래트송_mymusic.html";
 
 let appData = null;
 let heroIndex = 0;
-let heroTimer = null;
 let toastTimer = null;
 let picked = {mood: [], activity: [], time: []};
 
@@ -167,13 +166,10 @@ function renderHome() {
   showHero(0);
   document.getElementById("heroPrev").addEventListener("click", function() {
     showHero(heroIndex - 1);
-    startHeroTimer();
   });
   document.getElementById("heroNext").addEventListener("click", function() {
     showHero(heroIndex + 1);
-    startHeroTimer();
   });
-  startHeroTimer();
 
   document.getElementById("shortcutBox").innerHTML = appData.shortcuts.map(function(s) {
     return '<a href="' + s.href + '"><i><img src="' + s.icon + '" alt=""></i>' + s.label + "</a>";
@@ -183,14 +179,6 @@ function renderHome() {
   renderDestinationCards(document.getElementById("popularDestinationCards"), appData.destinations.slice(0, 4));
   renderChartPreview();
   renderStamps("stampBoxHome", 3);
-}
-
-function startHeroTimer() {
-  clearTimeout(heroTimer);
-  heroTimer = setTimeout(function() {
-    showHero(heroIndex + 1);
-    startHeroTimer();
-  }, 6000);
 }
 
 function showHero(index) {
@@ -217,8 +205,6 @@ function showHero(index) {
 function renderPass() {
   const city = document.getElementById("passCity");
   const gate = document.getElementById("passGate");
-  const flight = document.getElementById("passFlight");
-  const hint = document.getElementById("passHint");
   const button = document.getElementById("passButton");
 
   let options = '<option value="">도시를 선택하세요</option>';
@@ -235,9 +221,6 @@ function renderPass() {
       gate.innerHTML = '<option value="">도시 선택 후</option>';
       gate.disabled = true;
       gate.className = "empty";
-      flight.innerText = "—";
-      flight.className = "empty";
-      hint.innerText = "도시를 고르면 탑승권이 만들어져요";
       button.disabled = true;
       return;
     }
@@ -250,9 +233,6 @@ function renderPass() {
     gate.innerHTML = gateOptions;
     gate.disabled = false;
     gate.className = "empty";
-    flight.innerText = d.flight;
-    flight.className = "";
-    hint.innerText = d.cityName + "행 " + d.flight + " · 게이트는 지금 골라도, 체크인에서 골라도 돼요";
     button.disabled = false;
   });
 
@@ -886,7 +866,7 @@ function renderMyMusic() {
 
   const genreBox = document.getElementById("likedGenres");
   if (likedGenres.length == 0) {
-    genreBox.innerHTML = emptyHtml("좋아요한 장르가 아직 없어요.", PAGE_GENRE, "게이트 둘러보기");
+    genreBox.innerHTML = emptyHtml("좋아요한 장르가 아직 없어요.", PAGE_GENRE, "장르 둘러보기");
   } else {
     genreBox.innerHTML = likedGenres.map(function(id) {
       const g = findById(appData.genres, id);
@@ -911,7 +891,7 @@ function renderMyMusic() {
   } else {
     plBox.innerHTML = addedPlaylists.map(function(id) {
       const g = findById(appData.genres, id);
-      return '<div class="plc"><img src="' + g.image + '" alt=""><div><b>' + g.name + "</b><small>" + tracksOf(g).length + '곡 · 플레이리스트</small></div><div class="acts"><a class="btn s o" href="' + PAGE_PLAYLIST + '" data-city="' + g.city + '" data-genre="' + g.id + '">보기</a><button class="pill on" type="button" data-add-playlist="' + g.id + '" data-fixed="true"><span>빼기</span></button></div></div>';
+      return '<div class="plc"><img src="' + g.image + '" alt=""><div><b>' + g.name + "</b><small>" + tracksOf(g).length + '곡 · 플레이리스트</small></div><div class="acts"><a class="btn s o" href="' + PAGE_PLAYLIST + '" data-city="' + g.city + '" data-genre="' + g.id + '">보기</a><button class="pill on" type="button" data-add-playlist="' + g.id + '" data-fixed="true"><span>삭제</span></button></div></div>';
     }).join("");
   }
 
@@ -921,7 +901,7 @@ function renderMyMusic() {
   } else {
     songBox.innerHTML = addedSongs.map(function(id) {
       const t = findById(appData.tracks, id);
-      return songRowHtml(t, '<button class="pill on" type="button" data-add-song="' + t.id + '" data-fixed="true"><span>빼기</span></button>');
+      return songRowHtml(t, '<button class="pill on" type="button" data-add-song="' + t.id + '" data-fixed="true"><span>삭</span></button>');
     }).join("");
   }
   bindActions(document.querySelector(".two3"));
