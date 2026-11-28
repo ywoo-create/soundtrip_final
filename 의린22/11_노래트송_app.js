@@ -914,7 +914,7 @@ function renderMyMusic() {
   } else {
     songBox.innerHTML = addedSongs.map(function(id) {
       const t = findById(appData.tracks, id);
-      return songRowHtml(t, '<button class="pill on" type="button" data-add-song="' + t.id + '" data-fixed="true"><span>삭</span></button>');
+      return songRowHtml(t, '<button class="pill on" type="button" data-add-song="' + t.id + '" data-fixed="true"><span>삭제</span></button>');
     }).join("");
   }
   bindActions(document.querySelector(".two3"));
