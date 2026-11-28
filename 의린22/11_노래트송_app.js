@@ -164,6 +164,19 @@ function renderHeaderAndFooter() {
 function renderHome() {
   heroIndex = 0;
   showHero(0);
+  document.getElementById("heroLink").addEventListener("click", function() {
+    const slide = appData.heroSlides[heroIndex];
+
+    for (let i = 0; i < appData.destinations.length; i++) {
+        const d = appData.destinations[i];
+
+        if (slide.link == d.link) {
+            sessionStorage.setItem("soundtripCity", d.id);
+            sessionStorage.removeItem("soundtripGate");
+            break;
+        }
+    }
+});
   document.getElementById("heroPrev").addEventListener("click", function() {
     showHero(heroIndex - 1);
   });
