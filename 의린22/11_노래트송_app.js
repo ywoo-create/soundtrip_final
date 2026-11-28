@@ -606,6 +606,10 @@ function renderPlayerPage() {
 
   const addButton = document.getElementById("addCurrentTrackButton");
   addButton.setAttribute("data-add-song", id);
+  const likeButton = document.getElementById("likeCurrentTrackButton");
+  if (likeButton != null) {
+    likeButton.setAttribute("data-like-song", id);
+  }
   bindActions(document.getElementById("stPlayerActions"));
 }
 
