@@ -137,13 +137,8 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .fc:nth-child(4n) { margin-right: 0; }
 .fc:hover { border-color: #4d5cff; }
 .fc .ph { height: 200px; position: relative; overflow: hidden; }
-.fc .code { position: absolute; left: 14px; top: 14px; z-index: 2; background-color: #ffffff; border-radius: 999px; font-size: 11px; font-weight: 700; padding: 5px 11px; letter-spacing: 1px; }
 .fc .city { position: absolute; left: 16px; bottom: 14px; z-index: 2; color: #ffffff; font-size: 26px; font-weight: 800; letter-spacing: 1px; }
 .fc .city small { display: block; font-size: 11px; font-weight: 600; letter-spacing: 1px; }
-.fc .bd { display: flex; align-items: center; justify-content: space-between; padding: 15px 18px; border-top: 2px dashed #d5dcf7; }
-.fc .bd small { display: block; font-size: 10px; letter-spacing: 1.5px; color: #3b3f5c; font-weight: 800; margin-bottom: 3px; }
-.fc .bd b { font-size: 14px; font-weight: 800; }
-.fc .bd span { font-size: 13px; font-weight: 800; color: #4d5cff; }
 
 .two { display: flex; }
 .two > div:first-child { width: 55%; margin-right: 56px; }
@@ -321,9 +316,7 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 
 .pp { display: flex; border-radius: 26px; overflow: hidden; border: 1px solid #dde3f8; margin-top: 34px; }
 .pp .cover { width: 300px; background-color: #4d5cff; color: #ffffff; padding: 32px; }
-.pp .cover small { font-size: 10px; letter-spacing: 2.4px; font-weight: 800; }
 .pp .cover b { display: block; font-size: 28px; font-weight: 800; letter-spacing: -1px; margin: 10px 0 6px 0; line-height: 1.25; }
-.pp .cover p { font-size: 13px; }
 .pp .page { flex-grow: 1; background-color: #fbfcff; padding: 26px 34px; display: flex; align-items: center; }
 .stats { display: flex; flex-wrap: wrap; width: 250px; margin-right: 30px; }
 .stats div { width: 48%; margin: 0 2% 8px 0; background-color: #ffffff; border: 1px solid #e6e9f5; border-radius: 14px; padding: 12px 16px; }
@@ -339,8 +332,7 @@ h1 { font-weight: 800; letter-spacing: -1px; }
 .mh { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; margin-top: 8px; }
 .mh h2 { font-size: 22px; font-weight: 800; letter-spacing: -1px; }
 .mh span { font-size: 13px; color: #3b3f5c; }
-.mh p { font-size: 13px; color: #3b3f5c; margin-top: 4px; }
-.gl { display: flex; flex-wrap: wrap; margin: 16px 0 28px 0; }
+.gl { display: flex; flex-wrap: wrap; margin: 0; }
 .gm { display: flex; align-items: center; width: 100%; margin-bottom: 10px; border: 1px solid #e6e9f5; border-radius: 16px; padding: 10px 14px 10px 10px; }
 .gm img.g { width: 54px; height: 54px; border-radius: 10px; object-fit: cover; margin-right: 12px; }
 .gm div { flex-grow: 1; }
@@ -424,13 +416,6 @@ h1 { font-weight: 800; letter-spacing: -1px; }
   .category-column:last-child { border-bottom: 0; }
   .category-column h3 { font-size: 14px; margin-bottom: 5px; }
   .category-column a { padding: 4px 0; font-size: 13px; }
-}
-.pass-hint {
-  margin: 0 0 18px;
-  color: #3b3f5c;
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 600;
 }
 #likedGenres .empty-state {
     width: 100%;
