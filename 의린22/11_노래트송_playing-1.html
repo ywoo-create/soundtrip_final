@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="11_노래트송_김도연(2514537) 김의린(2514088) 남현서(2516120) 조연우(2514298)">
+<meta name="description" content="SoundTrip 음악 재생 페이지입니다.">
+<title>SoundTrip | 음악 재생</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="11_노래트송_playing.css">
+<script defer src="11_노래트송_header.js"></script>
+<script defer src="11_노래트송_app.js"></script>
+<script defer src="11_노래트송_player.js"></script>
+</head>
+<body class="player-page" data-track-id="lemon">
+<div class="top-accent"></div>
+<header class="site-header">
+  <div class="c hdr-main">
+    <a class="nol-logo" href="11_노래트송_index.html" aria-label="SoundTrip 홈"><img src="11_logo_header.png" alt="SoundTrip 로고"></a>
+    <div class="nol-search" role="search">
+      <input id="globalSearchInput" type="search" placeholder="도시, 장르, 곡을 검색해보세요" autocomplete="off">
+      <button id="globalSearchButton" type="button" aria-label="검색"><img src="11_search.svg" alt=""></button>
+    </div>
+    <nav class="account-menu" aria-label="회원 메뉴">
+      <a href="11_노래트송_account.html">로그인</a><span>|</span>
+      <a href="11_노래트송_signup.html">회원가입</a><span>|</span>
+      <a href="11_노래트송_mymusic.html">MY MUSIC</a>
+    </nav>
+  </div>
+  <div class="nav-wrap">
+    <nav class="c nol-tabs" aria-label="주요 메뉴">
+      <button type="button" class="all-menu" id="categoryButton" aria-controls="categoryMenu" aria-expanded="false">
+        <img src="11_menu.svg" alt=""><span>전체 카테고리</span>
+      </button>
+      <span class="tab-divider" aria-hidden="true"></span>
+      <a href="11_노래트송_index.html">홈</a><a href="11_노래트송_destinations.html">여행지</a><a href="11_노래트송_chart.html">차트</a><a href="11_노래트송_recommend.html">취향추천</a>
+      <div class="category-menu" id="categoryMenu" aria-label="전체 카테고리">
+        <div class="category-column">
+          <h3>여행 탐색</h3>
+          <a href="11_노래트송_destinations.html">여행지</a>
+        </div>
+        <div class="category-column">
+          <h3>음악 탐색</h3>
+          <a href="11_노래트송_playlist.html">플레이리스트</a>
+          <a href="11_노래트송_chart.html">차트</a>
+        </div>
+        <div class="category-column">
+          <h3>나만의 SoundTrip</h3>
+          <a href="11_노래트송_recommend.html">취향추천</a>
+          <a href="11_노래트송_mymusic.html">MY MUSIC</a>
+          <a href="11_노래트송_account.html">로그인</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="st-main c player-main">
+  <div class="crumb">
+    <a href="11_노래트송_index.html">홈</a> >
+    <a href="11_노래트송_destinations.html">여행지</a> >
+    <a href="11_노래트송_genre.html">도쿄</a> >
+    <b>J-Indie</b>
+  </div>
+
+  <div class="ihead"><div>
+    <h1>지금 재생 중인 음악</h1>
+    <p>선택한 곡과 함께 일본 도쿄를 여행해보세요.</p>
+  </div></div>
+
+  <section class="st-player-stage">
+    <div class="st-player-art">
+      <img id="trackCover" src="11_album-placeholder.svg" alt="앨범 커버">
+    </div>
+    <div class="st-player-info">
+      <div class="st-player-title-row">
+        <h1 id="trackTitle"></h1>
+      </div>
+      <p class="st-player-artist" id="trackArtist"></p>
+      <div class="st-player-actions" id="stPlayerActions">
+        <button type="button" id="stHeroPlayPauseButton" class="st-player-inline-toggle" aria-label="재생" title="재생">
+          <img id="stHeroPlayPauseIcon" src="11_play-fill-w.svg" alt="">
+        </button>
+        <button type="button" id="addCurrentTrackButton" class="st-player-action-button st-player-add-button" data-add-song="lemon" aria-label="MY MUSIC에 담기">
+          <img src="11_add.svg" alt=""><span>담기</span>
+        </button>
+        <button type="button" id="likeCurrentTrackButton" class="st-player-action-button st-player-like-button" data-like-song="lemon" aria-label="좋아요">
+          <img src="11_favorite.svg" alt="">
+        </button>
+        <a class="st-outline-button" href="11_노래트송_playlist.html">플레이리스트로 돌아가기</a>
+      </div>
+
+      <div class="arrival" id="arrivalBox" style="display:none">
+        <div><h3>도착했어요</h3><p>여권에 스탬프가 찍혔어요.</p></div>
+        <a class="btn s" href="11_노래트송_mymusic.html">MY MUSIC에서 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="st-section st-player-details">
+    <div class="st-section-heading">
+      <h2>곡 정보</h2>
+    </div>
+    <div class="st-player-detail-grid">
+      <article class="st-track-summary">
+        <h3 id="trackStoryTitle"></h3>
+        <p id="trackStoryText"></p>
+        <a href="11_노래트송_playlist.html" class="st-track-list-link">J-Indie 플레이리스트 전체 보기 →</a>
+      </article>
+      <article class="st-track-next-card" id="nextCard"></article>
+    </div>
+
+    <div class="st-lyrics-card">
+      <div class="st-lyrics-heading"><h2>가사</h2></div>
+      <div class="st-lyrics-content">
+        <p class="st-lyrics-text">夢ならばどれほどよかったでしょう
+유메나라바 도레호도 요캇타데쇼오
+꿈이라면 얼마나 좋았을까
+
+未だにあなたのことを夢にみる
+이마다니 아나타노 코토오 유메니 미루
+아직도 당신을 꿈 속에서 봐
+
+忘れた物を取りに歸るように
+와스레타 모노오 토리니 카에루요우니
+잊은 것을 가지러 돌아가는 것처럼
+
+古びた思い出の埃を拂う
+후루비타 오모이데노 호코리오 하라우
+오래된 추억의 먼지를 털어내
+
+戾らない幸せがあることを
+모도라나이 시아와세가 아루 코토오
+되돌아갈 수 없는 행복이 있다는 것을
+
+最後にあなたが敎えてくれた
+사이고니 아나타가 오시에테쿠레타
+마지막으로 당신이 가르쳐줬어
+
+言えずに隱してた昏い過去も
+이에즈니 카쿠시테타 쿠라이 카코모
+말하지 못한 채 숨기고 있던 어두운 과거도
+
+あなたがいなきゃ永遠に昏いまま
+아나타가 이나캬 에이엔니 쿠라이마마
+당신이 아니었다면 영원히 어두운 채로
+
+きっともうこれ以上　傷つくことなど
+킷토 모오 코레이죠오 키즈츠쿠 코토나도
+분명, 더 이상 상처입는 일 따윈
+
+ありはしないとわかっている
+아리와 시나이토 와캇테이루
+있을 수 없다는 걸 알아
+
+あの日の悲しみさえ
+아노 히노 카나시미사에
+그날의 슬픔조차
+
+あの日の苦しみさえ
+아노 히노 쿠루시미사에
+그날의 괴로움조차
+
+そのすべてを愛してた あなたとともに
+소노 스베테오 아이시테타 아나타토 토모니
+그 모든 것을 사랑했던 당신과 함께
+
+胸に殘り離れない
+무네니 노코리 하나레나이
+가슴에 남아 떠나지 않는
+
+苦いレモンのにおい
+니가이 레몬노 니오이
+씁쓸한 레몬의 향기
+
+雨が降り止むまでは歸れない
+아메가 후리야무마데와 카에레나이
+비가 그칠 때까지는 돌아갈 수 없어
+
+今でもあなたはわたしの光
+이마데모 아나타와 와타시노 히카리
+지금도 당신은 나의 빛
+
+暗闇であなたの背をなぞった
+쿠라야미데 아나타노 세오 나좃타
+어둠 속에서 당신의 모습을 덧그렸어
+
+その輪郭を鮮明に覺えている
+소노 린카쿠오 센메이니 오보에테이루
+그 윤곽을 선명하게 기억하고 있어
+
+受け止めきれないものと出会うたび
+우케토메키레나이 모노토 데아우 타비
+받아들일 수 없는 것과 마주칠 때마다
+
+溢れてやまないのは淚だけ
+아후레테 야마나이노와 나미다다케
+멈추지 않고 흘러 넘치는 것은 눈물 뿐
+
+何をしていたの　何を見ていたの
+나니오시테이타노 나니오미테이타노
+무엇을 하고 있을까, 무엇을 보고 있을까
+
+わたしの知らない橫顔で
+와타시노 시라나이 요코가오데
+내가 모르는 얼굴을 하고서
+
+どこかであなたが今
+도코카데 아나타가 이마
+어디선가 당신이 지금
+
+わたしと同じ様な
+와타시토 오나지요오나
+나처럼
+
+淚にくれ　淋しさの中にいるなら
+나미다니쿠레 사비시사노 나카니 이루나라
+눈물이 주는 쓸쓸함 속에 있다면
+
+わたしのことなどどうか　忘れてください
+와타시노 코토나도 도오카 와스레테쿠다사이
+나같은 것 따윈 부디 잊어주기를
+
+そんなことを心から願うほどに
+손나 코토오 코코로카라 네가우 호도니
+그런 것을 진심으로 바랄 정도로
+
+今でもあなたはわたしの光
+이마데모 아나타와 와타시노 히카리
+지금도 당신은 나의 빛이야
+
+自分が思うより
+지분가 오모우요리
+나 자신이 생각한 것보다도
+
+戀をしていたあなたに
+코이오 시테이타 아나타니
+사랑했던 당신에게
+
+あれから思うように
+아레카라 오모우요우니
+그날부터 생각대로
+
+息ができない
+이키가 데키나이
+숨을 쉬지 못 하겠어
+
+あんなに側にいたのに
+안나니 소바니 이타노니
+그렇게나 곁에 있었는데도
+
+まるで噓みたい
+마루데 우소 미타이
+마치 거짓말같아
+
+とても忘れられない
+토테모 와스레라레나이
+어떻게 해도 잊을 수 없어
+
+それだけが確か
+소레다케가 타시카
+그것만이 확실해
+
+あの日の悲しみさえ
+아노히노 카나시미사에
+그날의 슬픔조차
+
+あの日の苦しみさえ
+아노히노 쿠루시미사에
+그날의 괴로움조차도
+
+そのすべてを愛してた　あなたとともに
+소노 스베테오 아이시테타 아나타토 토모니
+그 전부를 사랑했었던 당신과 함께
+
+胸に殘り離れない
+무네니 노코리하나레나이
+가슴에 남아 떠나지 않는
+
+苦いレモンのにおい
+니가이 레몬노 니오이
+씁쓸한 레몬의 향기
+
+雨が降り止むまでは歸れない
+아메가 후리야무마데와 카에레나이
+비가 그칠 때까지는 돌아갈 수 없어
+
+切り分けた果實の片方の樣に
+키리와케타 카지츠노 카타호오노 요오니
+잘라서 나눈 과일의 한쪽 같이
+
+今でもあなたはわたしの光
+이마데모 아나타와 와타시노 히카리
+지금도 당신은 나의 빛인걸</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="c" id="siteFooter"></div>
+</footer>
+
+<section class="st-custom-player" id="stCustomPlayer" aria-label="SoundTrip 음악 재생기">
+  <audio id="stAudio" preload="metadata" aria-label="음원">
+    브라우저에서 오디오 재생을 지원하지 않습니다.
+  </audio>
+  <div class="st-custom-player-inner">
+    <div class="st-custom-track">
+      <div class="st-custom-track-art"><img id="dockCover" src="11_album-placeholder.svg" alt=""></div>
+      <div class="st-custom-track-copy">
+        <strong id="dockTitle"></strong>
+        <span id="dockArtist"></span>
+      </div>
+    </div>
+    <div class="st-custom-main">
+      <div class="st-custom-buttons" aria-label="재생 컨트롤">
+        <button type="button" id="stPreviousTrackButton" class="st-control-button" aria-label="이전 곡" title="이전 곡">
+          <img src="11_prev.svg" alt="">
+        </button>
+        <button type="button" id="stPlayPauseButton" class="st-control-button st-play-button" aria-label="재생" title="재생">
+          <img id="stPlayPauseIcon" src="11_play-fill-w.svg" alt="">
+        </button>
+        <button type="button" id="stNextTrackButton" class="st-control-button" aria-label="다음 곡" title="다음 곡">
+          <img src="11_next.svg" alt="">
+        </button>
+      </div>
+      <div class="st-custom-progress-row">
+        <span id="stCurrentTime" class="st-time-label">0:00</span>
+        <div class="st-progress-track">
+          <div class="st-progress-bg"></div>
+          <div id="stProgressFill" class="st-progress-fill"></div>
+          <input id="stProgressRange" class="st-progress-range" type="range" min="0" max="100" step="0.1" value="0" aria-label="재생 위치">
+        </div>
+        <span id="stDuration" class="st-time-label">0:00</span>
+      </div>
+    </div>
+    <div class="st-custom-tools">
+      <div class="st-custom-volume">
+        <button type="button" id="stMuteButton" class="st-mute-button" aria-label="음소거" title="음소거">
+          <img id="stMuteIcon" src="11_volume.svg" alt="">
+        </button>
+        <input id="stVolumeRange" class="st-volume-range" type="range" min="0" max="100" step="1" value="75" aria-label="음량">
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
