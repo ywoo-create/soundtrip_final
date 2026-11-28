@@ -119,16 +119,6 @@ function isPlayable(track) {
   return track.audio != undefined;
 }
 
-function formatLikes(n) {
-  if (n >= 1000) return (Math.floor(n / 100) / 10) + "천";
-  return String(n);
-}
-
-function genreLikeCount(genre) {
-  if (hasItem("soundtripLikedGenres", genre.id)) return genre.likes + 1;
-  return genre.likes;
-}
-
 function todayText() {
   const d = new Date();
   let month = d.getMonth() + 1;
@@ -501,7 +491,8 @@ function renderPlaylistPage() {
     '<div class="cs">' + keywords + "<span>" + list.length + "곡</span></div>" +
     '<div class="acts"><button class="btn" type="button" id="playAllButton"><img src="11_play-fill-w.svg" alt="">전체 듣기</button>' +
     '<button class="btn o" type="button" data-add-playlist="' + genre.id + '"><img src="11_add.svg" alt=""><span>전체 담기</span></button>' +
-    '<button class="btn o like" type="button" data-like-genre="' + genre.id + '"><img src="11_favorite.svg" alt=""><span>좋아요 <b data-like-count="' + genre.id + '">' + formatLikes(genreLikeCount(genre)) + "</b></span></button></div></div>";
+    '<button class="btn o like" type="button" data-like-genre="' + genre.id +
+    '"><img src="11_favorite.svg" alt=""><span>좋아요</span></button></div></div>';
   bindActions(summary);
 
   const box = document.getElementById("plTableBox");
@@ -1003,11 +994,6 @@ function refreshButtons() {
   nodes = document.querySelectorAll("[data-like-genre]");
   for (let i = 0; i < nodes.length; i++) {
     setLikeLook(nodes[i], hasItem("soundtripLikedGenres", nodes[i].getAttribute("data-like-genre")));
-  }
-  nodes = document.querySelectorAll("[data-like-count]");
-  for (let i = 0; i < nodes.length; i++) {
-    const g = findById(appData.genres, nodes[i].getAttribute("data-like-count"));
-    nodes[i].innerText = formatLikes(genreLikeCount(g));
   }
   nodes = document.querySelectorAll("[data-add-song]");
   for (let i = 0; i < nodes.length; i++) {
